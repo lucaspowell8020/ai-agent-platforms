@@ -1,0 +1,1106 @@
+{
+  "$schema": "./platforms.schema.json",
+  "source": "https://agentshortlist.com",
+  "sourceRepo": "https://github.com/lucaspowell8020/agentshortlist",
+  "verifiedDate": "2026-04-27",
+  "verificationCadence": "monthly",
+  "verificationMethod": "Hands-on testing across real builder workflows. Verdicts and ratings are editorial. Pros and cons reflect production use, not vendor marketing.",
+  "license": "CC-BY-4.0",
+  "platforms": [
+    {
+      "slug": "openclaw",
+      "name": "OpenClaw",
+      "tagline": "The AI that actually does things",
+      "category": "harness",
+      "categoryLabel": "Open-source harness",
+      "url": "https://openclaw.ai",
+      "openSource": true,
+      "techLevel": "low-code",
+      "pricing": "Free and open-source. You pay API costs for whichever model you use.",
+      "rating": 4.5,
+      "verdict": "The most mature open-source agent harness. If you want one AI doing things across your tools and devices, start here.",
+      "bestFor": "Individuals and small teams who want a self-hosted AI that controls their computer, manages email, and runs tasks — without a monthly SaaS bill.",
+      "notFor": "Non-technical operators who don't want to run software on their own machines.",
+      "description": "OpenClaw is the flagship personal AI harness — 365,000 GitHub stars makes it one of the most popular AI projects ever built. You install it locally (Mac, Windows, or Linux), connect it to a messaging platform (WhatsApp, Telegram, iMessage — it supports 20+), and you have an AI with hands: it browses the web, reads email, executes scripts, fills forms, and talks to your APIs. The community is the main reason to choose it. 365k stars means 500+ contributors, thousands of community-built skills, and documentation that has been written, corrected, and improved by people who actually use it. Model-agnostic: run it against Claude, GPT-4, or a local model.",
+      "pros": [
+        "365k stars — the largest open-source agent community by far",
+        "Runs on your own hardware, fully private",
+        "20+ messaging platform integrations",
+        "Model-agnostic: Claude, GPT, local models all supported",
+        "Mature plugin and skills ecosystem"
+      ],
+      "cons": [
+        "Single-user architecture by default — not built for team deployment",
+        "Requires Node.js setup and comfort with a terminal",
+        "You manage your own API costs and uptime"
+      ],
+      "githubUrl": "https://github.com/openclaw/openclaw",
+      "githubStars": "365k",
+      "license": "MIT"
+    },
+    {
+      "slug": "hermes",
+      "name": "Hermes",
+      "tagline": "The agent that grows with you",
+      "category": "harness",
+      "categoryLabel": "Open-source harness",
+      "url": "https://hermes-agent.nousresearch.com",
+      "openSource": true,
+      "techLevel": "developer",
+      "pricing": "Free and open-source. Supports 200+ models via OpenRouter.",
+      "rating": 4,
+      "verdict": "The most technically sophisticated open-source agent. If you want an AI that gets better at your specific workflows over time, Hermes is the only real option.",
+      "bestFor": "Technical operators and developers who want a server-deployed agent that builds institutional memory and improves from experience.",
+      "notFor": "Anyone who wants a quick setup. Hermes rewards sustained investment.",
+      "description": "Hermes is built by Nous Research, one of the most credible independent AI labs. The defining feature is its learning loop: Hermes creates skills from experience, improves them during use, and builds a deepening model of who you are and how you work. Most agents reset every session. Hermes compounds. It runs on a server (Docker, SSH, Modal, Singularity) rather than your local machine, so it operates 24/7 without your laptop needing to be on. It supports 200+ models via OpenRouter, integrates with Telegram, Discord, Slack, WhatsApp, and Signal, and can run parallel isolated subagents for complex tasks. The Atropos RL integration connects it directly to frontier research methods — it's the only production harness with that lineage.",
+      "pros": [
+        "Genuine self-improvement loop — skills compound over time",
+        "Built by Nous Research (serious AI lab backing)",
+        "200+ model support via OpenRouter — no vendor lock-in",
+        "Server-deployed — runs 24/7 without your machine being on",
+        "Parallel subagent execution for complex workflows"
+      ],
+      "cons": [
+        "Steeper setup than OpenClaw — Python-based server deployment",
+        "119k stars vs OpenClaw's 365k — smaller community",
+        "The self-improvement story requires consistent use to pay off"
+      ],
+      "githubUrl": "https://github.com/nousresearch/hermes-agent",
+      "githubStars": "119k",
+      "license": "MIT",
+      "useCases": [
+        {
+          "title": "Automated Email Management",
+          "body": "Connect Hermes to your Gmail account and it becomes a real inbox manager. It classifies incoming messages, labels them automatically, and pushes phone notifications for anything high-priority — a sales inquiry, a form fill, a payment alert. It writes its own Python scripts to poll your email on a schedule, which means it's not burning API credits sitting in a loop waiting for something to happen."
+        },
+        {
+          "title": "Daily Briefings and Calendar Integration",
+          "body": "Wire Hermes to your Google Calendar and set a cron job. Every morning it pulls your upcoming events, flags anything you missed, and optionally adds a news summary for your specific niche — without you opening a single app. Same setup works for Friday recaps. You get a briefing in Telegram or Discord. You didn't ask for it. It just arrives."
+        },
+        {
+          "title": "Content and Market Research",
+          "body": "Give Hermes a research task — find the top trending AI tools, identify YouTube gaps in a niche — and it works through it autonomously. The part that separates it from other tools: when it finishes, you can tell it to save the workflow as a named skill. Call it 'youtube-video-research' and run it again next week with one command. Exact same process, no re-explaining."
+        },
+        {
+          "title": "Social Media Analytics and Auto-Posting",
+          "body": "Hermes can scrape post performance from platforms that make API access difficult by using your browser cookies directly. It reads your metrics — likes, replies, reposts — identifies the formats that are working, and can draft and publish new posts on a schedule. The full loop from 'here's an idea' to 'it's posted' runs without you in it."
+        },
+        {
+          "title": "Personal Health Data Tracking",
+          "body": "Link Hermes to your Apple Health data via a custom API and set a morning cron job. It pulls your sleep duration, wake time, and step count, cross-references them with your calendar, and delivers a personalised health report before you've had coffee. Not a dashboard — a report, written in plain language, with observations specific to your week."
+        },
+        {
+          "title": "Building a Second Brain",
+          "body": "Hermes stores everything it learns about you — memories, skills, preferences — as standard Markdown files. Connect those files to Obsidian and sync them across devices via SyncThing or a NAS drive, and you have a persistent AI wiki that knows your communication style, your ongoing projects, and your context. It doesn't reset between sessions. It accumulates."
+        },
+        {
+          "title": "Coding Assistance and Software Development",
+          "body": "Hermes plans, writes, and reviews code. Ask it to automate a local task with a shell script, debug a GitHub issue, or build a working web app from a description. If you're running Open Web UI, it previews what it builds in the browser automatically. It's not a code editor — it's an agent that happens to write code when the task calls for it."
+        },
+        {
+          "title": "Orchestrating Other AI Agents",
+          "body": "Hermes can act as the coordinator for a multi-agent setup. Route simple reasoning and quick tasks through Hermes directly. Dispatch complex research or multi-step workflows to OpenClaw or another runtime. Hermes waits for the result, assembles the output, and returns a single clean answer. You interact with one agent. Multiple are working behind it."
+        },
+        {
+          "title": "Automated Business and Sales Reporting",
+          "body": "Set a Monday morning cron job. Hermes pulls your App Store revenue, your top-line sales data, or whatever metric your business runs on, formats it clearly, and sends it to Telegram or Discord. No spreadsheet to open. No dashboard to log into. The number arrives where your team already is."
+        },
+        {
+          "title": "Trip Planning and Lifestyle Reminders",
+          "body": "Hermes handles the everyday work that isn't business-critical but still takes time — researching flights and hotels, transcribing voice memos, setting recurring reminders to step away from the screen. You can configure heartbeat messages: Hermes checks in on a schedule, sends a stretch reminder, or drops an unsolicited business improvement suggestion when it notices a pattern. It runs whether you're thinking about it or not."
+        }
+      ]
+    },
+    {
+      "slug": "paperclip",
+      "name": "Paperclip",
+      "tagline": "The company, not just the employee",
+      "category": "harness",
+      "categoryLabel": "Agent orchestration",
+      "url": "https://paperclip.ing",
+      "openSource": true,
+      "techLevel": "developer",
+      "pricing": "Free and open-source. Self-hosted on Node.js + PostgreSQL.",
+      "rating": 4,
+      "verdict": "The only serious open-source platform for orchestrating teams of agents. If you're past one agent doing one thing, Paperclip is the layer you need.",
+      "bestFor": "Teams running multiple AI agents who need org structure, budget controls, and approval workflows across their agent workforce.",
+      "notFor": "Anyone just getting started. Paperclip is infrastructure, not an entry point.",
+      "description": "Paperclip's own framing says it best: 'If OpenClaw is an employee, Paperclip is the company.' It's an orchestration layer — org charts, reporting lines, budget limits, approval gates, audit logs — for a workforce of AI agents. It works with any agent runtime: OpenClaw, Claude Code, Cursor, custom HTTP agents. The heartbeat system wakes agents on schedule, assigns tasks, tracks what they spent, and surfaces anything that needs human review. Hard per-agent budget limits prevent runaway API spend. The full audit trail with immutable decision history means you can reconstruct exactly what an agent did and why. Latest release was April 16, 2026.",
+      "pros": [
+        "The only open-source multi-agent orchestration platform",
+        "Works with any agent runtime — fully vendor-agnostic",
+        "Hard budget limits per agent prevent runaway API costs",
+        "Immutable audit trail for every agent decision",
+        "Active development — latest release April 2026"
+      ],
+      "cons": [
+        "Not a starting point — assumes you have agents to orchestrate",
+        "Self-hosting requires PostgreSQL and Node.js infrastructure",
+        "Smaller community than OpenClaw or Hermes"
+      ],
+      "githubUrl": "https://github.com/paperclipai/paperclip",
+      "githubStars": "59k",
+      "license": "MIT",
+      "useCases": [
+        {
+          "title": "Building and Launching SaaS Products",
+          "body": "Paperclip can run an entire product team autonomously. One user built a company called Proof Shot — a tool for automating customer testimonials — entirely inside Paperclip. A CEO agent hired a founding engineer and a QA agent. Those agents built the backend, the AI processing pipeline, and an embeddable frontend UI. No human wrote the first line of code."
+        },
+        {
+          "title": "Full-Stack Newsletter Automation",
+          "body": "Stand up a four-agent team — researcher, writer, editor, reviewer — and your newsletter runs itself. The team pulls performance metrics from previous issues, brainstorms angles, drafts the content, and pushes updates to ConvertKit. Each cycle, it's working from data on what actually performed. Growth becomes a system, not a task."
+        },
+        {
+          "title": "Complex Lead Generation and Data Aggregation",
+          "body": "Paperclip handles research workflows that require combining multiple data sources into a single judgment. One roofing company uses it to identify high-probability leads by cross-referencing satellite imagery with recent hail storm data in high-income neighbourhoods. The agent team surfaces the list. The sales team works it."
+        },
+        {
+          "title": "Automated Security Reviews and Code Audits",
+          "body": "Schedule a nightly security agent to sweep your codebase for exposed secrets, API keys, and known vulnerability patterns. Existing cybersecurity firms are already running Paperclip to deliver automated audit reports to their clients — the same checks, every night, without a consultant on the clock."
+        },
+        {
+          "title": "Autonomous Video Game Development",
+          "body": "Paperclip ships with pre-built company templates. Import a game studio template and you have a creative director, producer, and technical director ready to take a brief. One team used this setup to build a bullet-hell game inspired by Vampire Survivors in Godot — the agents wrote the design doc, built the game, and iterated on it without a human in the loop."
+        },
+        {
+          "title": "Open-Source Community Management",
+          "body": "Run a daily agent that monitors your GitHub repo, reads every pull request merged in the last 24 hours, drafts a Discord message calling out the contributors by name, and posts it automatically. Your community sees recognition without you managing the process. Consistency without overhead."
+        },
+        {
+          "title": "Scaling Content Strategy and Marketing",
+          "body": "Assign agents to your marketing function and set a brief. They can develop a LinkedIn content calendar, produce social media carousels, or plan and script 60-second promotional videos using tools like Remotion. The output isn't a plan — it's the actual assets, ready for review and publish."
+        },
+        {
+          "title": "UI/UX Design Review and Bug Fixing",
+          "body": "Upload a screenshot of a broken UI element — a misaligned button, a pill that's wrapping wrong — and assign it to a coder agent with a single instruction. The agent fixes the code and passes it to a QA agent with browser access, which visually confirms the fix before closing the ticket. Design PM work, without the back-and-forth."
+        },
+        {
+          "title": "Dedicated Scientific Research",
+          "body": "Paperclip supports importing large pre-built agent architectures — teams of up to 48 agents configured specifically for scientific research. These teams come with structured knowledge bases and role definitions modelled on real doctors and scientists. You describe the research question. They work it."
+        },
+        {
+          "title": "Foundation and Family Organisation",
+          "body": "Paperclip's delegation model applies anywhere you have tasks, roles, and output to track — not just software. A dentist currently runs a Paperclip agent company to manage their family foundation and handle day-to-day household administration. The same structure that runs a SaaS product team runs a family calendar and grant process."
+        }
+      ]
+    },
+    {
+      "slug": "lindy",
+      "name": "Lindy",
+      "tagline": "Build AI agents in minutes, not months",
+      "category": "no-code",
+      "categoryLabel": "No-code SaaS",
+      "url": "https://lindy.ai",
+      "openSource": false,
+      "techLevel": "no-code",
+      "pricing": "Freemium. Paid plans from ~$49/month.",
+      "rating": 4.5,
+      "verdict": "The best no-code AI agent platform for operators. Non-technical teams can ship real automations in hours.",
+      "bestFor": "Sales and customer support teams at B2B companies who need working agents in days, not weeks, with no developer on staff.",
+      "notFor": "Teams with complex custom integrations, regulated data, or who need full infrastructure control.",
+      "description": "Lindy is the most operator-friendly AI agent platform we tested. No code required — describe what you want your agent to do in plain English and Lindy builds it. The platform specializes in sales follow-up, meeting preparation, customer support triage, and email management. The pre-built templates are genuinely polished: not 'technically works' polished, but 'you could ship this to customers' polished. The tradeoff is the usual SaaS bargain: you're on their infrastructure, their pricing, and their data policies. For standard B2B workflows with non-sensitive data, that tradeoff is worth it.",
+      "pros": [
+        "Genuinely no-code — plain English agent creation",
+        "Fast time to first value (hours, not days)",
+        "Polished pre-built templates for sales and support",
+        "Managed infrastructure — nothing to maintain"
+      ],
+      "cons": [
+        "SaaS pricing adds up at scale",
+        "Limited customization ceiling vs open-source harnesses",
+        "Your data lives on their servers",
+        "Hits a ceiling on complex or non-standard workflows"
+      ]
+    },
+    {
+      "slug": "relevance-ai",
+      "name": "Relevance AI",
+      "tagline": "Build your AI workforce",
+      "category": "no-code",
+      "categoryLabel": "No-code SaaS",
+      "url": "https://relevanceai.com",
+      "openSource": false,
+      "techLevel": "low-code",
+      "pricing": "Freemium. Paid plans from ~$19/month.",
+      "rating": 4,
+      "verdict": "The most powerful no-code agent builder. More complex than Lindy, but gives skilled non-developers real control.",
+      "bestFor": "Ops teams with one skilled builder who needs more than templates but doesn't want to write code.",
+      "notFor": "Pure non-technical users who want something to work without thinking about it — use Lindy instead.",
+      "description": "Relevance AI sits between Lindy (pure no-code) and n8n (developer-required) on the complexity spectrum. If your team has a builder — someone who thinks in processes and isn't afraid of a workflow editor — Relevance gives them more power than any other no-code platform. The tool-building interface is the best in the category: chain tasks, set conditional logic, build multi-step research workflows, configure how the agent reasons about edge cases — all without code. Particularly strong for outbound research, sales intelligence, and anything involving large-scale data enrichment.",
+      "pros": [
+        "Most powerful tool-building interface in the no-code category",
+        "Handles complex multi-step logic without code",
+        "Strong for research and outbound automation",
+        "Active product development"
+      ],
+      "cons": [
+        "Steeper learning curve than Lindy",
+        "Pricing scales quickly at volume",
+        "Documentation can be inconsistent"
+      ]
+    },
+    {
+      "slug": "n8n",
+      "name": "n8n",
+      "tagline": "Workflow automation you control",
+      "category": "workflow",
+      "categoryLabel": "Workflow builder",
+      "url": "https://n8n.io",
+      "openSource": true,
+      "techLevel": "low-code",
+      "pricing": "Open-source self-hosted (free). Cloud plans from $24/month.",
+      "rating": 4.5,
+      "verdict": "The best workflow automation platform for teams with a developer. Beats every no-code tool for complex automations.",
+      "bestFor": "Teams with at least one developer who need flexible, powerful workflow automation with AI agents built in — and want the option of full data control.",
+      "notFor": "Teams with zero technical resources. Initial setup requires someone comfortable with a server.",
+      "description": "n8n is what technical operators reach for when Zapier or Make isn't flexible enough. It connects to virtually everything (400+ integrations), can be self-hosted for full data control, and has a native AI agent layer that's improved significantly. The visual workflow builder handles conditional logic, loops, error handling, webhooks, and custom HTTP calls without writing code — once it's set up. If your team has even one developer who can spend a day configuring it, n8n will outperform any no-code platform for complex multi-step automations.",
+      "pros": [
+        "400+ integrations — connects to virtually everything",
+        "Self-hostable for full data control",
+        "Strong native AI agent support",
+        "Large, active open-source community",
+        "Meaningfully more flexible than Zapier or Make"
+      ],
+      "cons": [
+        "Initial setup requires developer time",
+        "Self-hosted version requires ongoing maintenance",
+        "Higher learning curve than no-code alternatives"
+      ],
+      "githubUrl": "https://github.com/n8n-io/n8n"
+    },
+    {
+      "slug": "stack-ai",
+      "name": "Stack AI",
+      "tagline": "Enterprise AI applications without the engineering team",
+      "category": "workflow",
+      "categoryLabel": "AI application builder",
+      "url": "https://stack-ai.com",
+      "openSource": false,
+      "techLevel": "low-code",
+      "pricing": "Freemium. Team plans from $199/month.",
+      "rating": 3.5,
+      "verdict": "Best for internal knowledge base and document Q&A. Strong in its lane, expensive outside it.",
+      "bestFor": "Ops teams who want AI agents over their internal documents — SOPs, contracts, product specs, Notion wikis.",
+      "notFor": "External-facing automations or multi-step process workflows — n8n handles those better for most teams.",
+      "description": "Stack AI shines on document-heavy use cases: ingest your internal knowledge base and make it queryable by AI agents. If your team spends hours looking through Notion, Confluence, or shared drives, Stack AI can turn those documents into an AI that answers questions in plain English. The RAG implementation is one of the better ones in the no-code category. Where it falls short is flexibility — multi-step automations with conditional logic are better served by n8n or Relevance AI.",
+      "pros": [
+        "Best-in-class document ingestion and RAG pipeline",
+        "Strong enterprise data connectors (Notion, Confluence, Google Drive)",
+        "SOC 2 compliant",
+        "Good UI for non-technical configuration"
+      ],
+      "cons": [
+        "Expensive at team scale ($199+/month)",
+        "Limited flexibility for multi-step process automation",
+        "Weaker for external-facing or trigger-based workflows"
+      ]
+    },
+    {
+      "slug": "claude-code",
+      "name": "Claude Code",
+      "tagline": "The next level up from the Claude you already use",
+      "category": "coding",
+      "categoryLabel": "Coding Agent",
+      "url": "https://claude.ai/code",
+      "openSource": false,
+      "techLevel": "low-code",
+      "pricing": "Included with Claude Pro ($20/month) and above. Max plan ($100/month) unlocks more usage and Opus 4.7. Uses your existing Claude account — no separate subscription.",
+      "rating": 4.5,
+      "verdict": "Most builders pay for Claude and use 5% of what it can do. Claude Code is the rest. The biggest productivity step most builders haven't taken yet.",
+      "bestFor": "Builders who already have a Claude subscription and want to go further — developers automating engineering work, founders building internal tools, and non-developers who've realised Claude can write and run code if given the right environment.",
+      "notFor": "People who haven't yet hit the ceiling of what Claude can do in the browser. Start there. Once you've maxed out chat-based workflows, Claude Code is the next step.",
+      "description": "Claude Code is Anthropic's agentic coding tool — a CLI that runs in your terminal and connects Claude directly to your files, your project, and your computer. You give it a task in plain English; it reads the relevant files, writes a plan, makes coordinated edits across multiple files, runs your tests, and fixes what breaks. If you've used Claude in the browser, you've seen what it can do with code when you paste it in. Claude Code removes the paste step. It reads your codebase directly. It runs commands. It commits to git. It opens pull requests. The work happens in your project, not a chat window. The thing that separates it from GitHub Copilot or Cursor: it's not completing your sentences, it's completing your tasks. Copilot suggests the next line. Claude Code handles the next hour of work. It runs on your machine or in the cloud, integrates with VS Code and JetBrains, connects to external services via MCP servers, and supports CLAUDE.md files that carry project context across sessions — so you're not re-explaining your project every time you open it.",
+      "pros": [
+        "If you already pay for Claude, there's no new subscription — it's included",
+        "Full agentic loop — reads files, plans, edits, tests, and iterates without you driving every step",
+        "Works across macOS, Linux, WSL, and Windows",
+        "Native git integration — commits, branches, and PRs without leaving the conversation",
+        "MCP servers connect it to Jira, Linear, Slack, databases, and custom APIs",
+        "CLAUDE.md gives it persistent memory of your project across sessions",
+        "VS Code and JetBrains extensions for builders who prefer an IDE to a terminal"
+      ],
+      "cons": [
+        "Requires a terminal or IDE — there's no browser-based point-and-click interface",
+        "Token costs climb fast on large codebases or long sessions",
+        "Pricing has changed rapidly in 2026 — verify your plan's limits before a long session",
+        "MCP server connections require manual setup",
+        "Checkpoints undo file changes but not external side effects like API calls or database writes"
+      ],
+      "githubUrl": "https://github.com/anthropics/claude-code",
+      "useCases": [
+        {
+          "title": "Build Internal Tools Without a Developer",
+          "body": "Describe the tool you need — a dashboard that pulls from a spreadsheet, a script that processes uploaded files, a form that emails you results — and Claude Code builds it. It writes the code, runs it, fixes what breaks, and hands you something that works. Founders and ops leads are using this to ship tools in hours that would previously have required a developer and a sprint."
+        },
+        {
+          "title": "Automate Your Own Repetitive Work",
+          "body": "If you find yourself doing the same thing over and over — reformatting data, processing files, sending the same type of report — Claude Code can write and run the automation. Describe what you do manually. It writes the script. You run it once to verify, then schedule it. The task stops being on your list."
+        },
+        {
+          "title": "Bug Triage from Error Messages",
+          "body": "Paste an error message or a stack trace and ask Claude Code to find it and fix it. It traces the execution path through your files, identifies the root cause, patches the fix, and runs the tests to confirm. You get a working fix, not a suggestion to try."
+        },
+        {
+          "title": "Automated Pull Requests for Engineering Teams",
+          "body": "Give Claude Code a ticket or a plain-English description of the change needed. It reads the relevant code, makes the changes, writes a commit message, and creates the PR — complete with a description of what changed and why. Engineering teams processing high volumes of well-scoped tickets use this to move faster without growing headcount."
+        },
+        {
+          "title": "Test Coverage Before a Release",
+          "body": "Point Claude Code at a module with low test coverage and ask it to write tests. It reads the implementation, identifies the edge cases, and writes a suite that covers them. Run before a refactor or a release — the kind of work that gets skipped under deadline pressure but shouldn't."
+        },
+        {
+          "title": "Legacy Code That Nobody Wants to Touch",
+          "body": "Every codebase has files that haven't been touched in years and that nobody fully understands. Point Claude Code at them. Ask it to explain what the code does, then ask it to modernise it — update deprecated dependencies, replace old patterns, add documentation. Work that gets deferred indefinitely becomes a single Claude Code session."
+        },
+        {
+          "title": "Codebase Onboarding",
+          "body": "New to a project — or handing one off? Use CLAUDE.md to load Claude Code with project context: architecture decisions, naming conventions, things to avoid. It answers architectural questions, explains why things are structured the way they are, and traces how a request flows through the system. Onboarding time drops significantly."
+        },
+        {
+          "title": "Documentation That Reflects What the Code Actually Does",
+          "body": "Ask Claude Code to document a module or service. It reads the implementation, infers intent from the code, and generates accurate documentation — JSDoc comments, README sections, architecture notes. Unlike documentation written from memory, this reflects what the code actually does right now."
+        },
+        {
+          "title": "Security and Dependency Audits on a Schedule",
+          "body": "Wire Claude Code into GitHub Actions to run overnight. It checks dependencies for known vulnerabilities, flags outdated packages, suggests upgrade paths, and opens a PR with findings each morning. Security hygiene without a dedicated security engineer or a manual weekly process."
+        },
+        {
+          "title": "Parallel Agent Workflows for Complex Projects",
+          "body": "For large initiatives — a migration, a new feature spanning multiple services — Claude Code can run parallel subagents. One handles the backend, another the frontend, another runs the tests. A coordinator assembles the results. Work that would take a team a sprint can run as an overnight job."
+        }
+      ]
+    },
+    {
+      "slug": "cursor",
+      "name": "Cursor",
+      "tagline": "The AI-first IDE that 360k developers pay for",
+      "category": "coding",
+      "categoryLabel": "Coding Agent",
+      "url": "https://cursor.com",
+      "openSource": false,
+      "techLevel": "developer",
+      "pricing": "Hobby (free): 2k completions/month, 50 slow requests/month. Pro $20/month. Pro+ $60. Ultra $200. Teams $40/user/month. June 2025 pricing pivot reduced effective fast requests by ~55%.",
+      "rating": 4,
+      "verdict": "The most-used AI coding tool by paying customers — $2B in annualised revenue, 360k paying users. Multi-model flexibility is a real edge. The June 2025 pricing change burned some early adopters.",
+      "bestFor": "Builders who want an IDE-first AI experience and the ability to switch between Claude, GPT, and Gemini mid-session. Strong for rapid prototyping and exploration.",
+      "notFor": "Teams committed to JetBrains, Vim, or any non-VS Code editor. Anyone who wants CLI-first workflows. Operators sensitive to SaaS pricing changes.",
+      "description": "Cursor is a VS Code fork with AI baked into the editor. The headline is multi-model: Claude Sonnet 4.6, GPT-5, and Gemini 2.0 are all available, and you can switch between them mid-session for the same task. That flexibility is the real differentiator — Claude Code only runs Claude, Codex only runs OpenAI. The IDE-first approach is faster than CLI workflows for exploration and rapid prototyping. The trade-off is VS Code lock-in: no JetBrains, no Vim, no terminal-first workflows. The June 2025 pricing pivot replaced fixed fast-request quotas with a $20 credit pool, which effectively cut monthly requests by ~55% without an announcement. Existing users felt blindsided. Despite that, Cursor still hit $2B annualised revenue by early 2026 — the market has voted.",
+      "pros": [
+        "Multi-model — switch between Claude, GPT, and Gemini in the same session",
+        "Familiar VS Code experience reduces onboarding friction",
+        "Largest paying customer base on this list (360k)",
+        "Best for rapid prototyping and exploration",
+        "Active product development — feature velocity is high"
+      ],
+      "cons": [
+        "VS Code lock-in — no JetBrains, no Vim, no terminal-first workflows",
+        "June 2025 pricing pivot cut effective requests ~55% without warning",
+        "Agent mode can make large unreviewable multi-file edits",
+        "Performance lag on very large projects vs vanilla VS Code",
+        "Opaque usage meter — hard to track credit consumption in real time"
+      ],
+      "useCases": [
+        {
+          "title": "Rapid Prototyping and MVPs",
+          "body": "Cursor is the fastest tool on this list for exploration. Open a blank project, describe what you want to build, and the IDE drives the AI through inline suggestions and multi-file edits. Builders shipping MVPs report 5–10× faster time to first working prototype vs working in plain VS Code with autocomplete."
+        },
+        {
+          "title": "Multi-Model Comparison Mid-Session",
+          "body": "Try Claude Sonnet 4.6 for a complex refactor. Switch to GPT-5 for a function it might handle differently. Drop down to Gemini 2.0 for a long-context task. Same conversation, three models. No other coding tool lets you do this without switching environments."
+        },
+        {
+          "title": "In-Line Edits While You Type",
+          "body": "Cursor's bread and butter: AI completions that are aware of your whole codebase, not just the current file. Type the start of a function and Cursor predicts what you want to write based on patterns from across your project."
+        },
+        {
+          "title": "Multi-File Edits with Diff Review",
+          "body": "Describe a refactor — 'rename this function and update all 23 call sites' — and Cursor stages the changes across files with a diff review before commit. Better safety than blind agent execution; faster than doing it manually."
+        },
+        {
+          "title": "Codebase Search Beyond Grep",
+          "body": "Ask 'where do we handle authentication?' and Cursor runs a semantic search instead of a literal one. Useful when you don't know the exact function name but you know what the code does."
+        },
+        {
+          "title": "Onboarding to a New Codebase",
+          "body": "Open an unfamiliar repo, ask Cursor to explain what each module does, trace how a request flows through the system. The IDE context (file tree, dependencies, imports) makes the explanations more accurate than chat-only tools."
+        }
+      ]
+    },
+    {
+      "slug": "aider",
+      "name": "Aider",
+      "tagline": "Open-source CLI pair programmer with model freedom",
+      "category": "coding",
+      "categoryLabel": "Coding Agent",
+      "url": "https://aider.chat",
+      "openSource": true,
+      "techLevel": "developer",
+      "pricing": "Free. You bring your own API keys (Anthropic, OpenAI, DeepSeek, Gemini, etc.). 4.2× more token-efficient than Claude Code on identical tasks — verified via independent benchmarks.",
+      "rating": 4,
+      "verdict": "The open-source pick. Bring your own API keys, switch models mid-session, and use 4× fewer tokens than Claude Code on identical work. Trade-off: lower accuracy and a smaller community.",
+      "bestFor": "Cost-conscious developers, open-source purists, anyone who wants to mix Claude, GPT, DeepSeek, and Gemini in one workflow. Strong for surgical refactoring and audit-friendly git workflows.",
+      "notFor": "Teams that need maximum accuracy on complex tasks (Aider lands around 85%) or rely on enterprise-grade vendor support.",
+      "description": "Aider is Apache 2.0 licensed, model-agnostic, and git-native. Every change auto-commits with a clean message — perfect audit trail, easy rollback. The token efficiency claim (4.2× fewer tokens than Claude Code on identical tasks) is verified by independent benchmarks; for high-volume teams that adds up to real money. The model-agnostic story is the differentiator: use Claude for reasoning-heavy work, switch to DeepSeek for boilerplate, drop down to a local model for sensitive code. Lower accuracy (around 85% on technical benchmarks vs ~91%+ for Claude Code) and a smaller plug-in ecosystem are the real trade-offs.",
+      "pros": [
+        "Free — pay only your model API costs (BYOK)",
+        "Works with any major LLM — Claude, GPT, DeepSeek, Gemini, local models",
+        "4.2× more token-efficient than Claude Code on identical tasks (verified)",
+        "Git-native: every change auto-commits, full audit trail, easy rollback",
+        "Open source (Apache 2.0) — fork it, audit it, self-host it",
+        "Editor-agnostic — terminal-based, works alongside any editor"
+      ],
+      "cons": [
+        "~85% accuracy on technical benchmarks (vs ~91%+ for Claude Code or Cursor)",
+        "Smaller community — fewer plugins, integrations, examples",
+        "No native MCP server or hooks support (extensibility limited)",
+        "Single-agent only — no subagent coordination",
+        "Depends on third-party model provider uptime"
+      ],
+      "githubUrl": "https://github.com/Aider-AI/aider",
+      "githubStars": "41.6k",
+      "license": "Apache 2.0",
+      "useCases": [
+        {
+          "title": "Cost-Optimised Coding at Scale",
+          "body": "Use Haiku or DeepSeek for simple tasks. Switch to Sonnet for medium complexity. Drop to Opus only when you genuinely need it. Aider's model freedom plus 4.2× token efficiency means a team running heavy AI-assisted workflows can cut their model bill by 70%+ vs running everything through Claude Code on Opus."
+        },
+        {
+          "title": "Surgical Refactoring with Auto-Commit Safety",
+          "body": "Tell Aider to rename a function across 30 files. It makes the changes, commits each logical unit with a clean message, and you can review every step in git log. Compare to tools that batch unrelated changes into one commit — Aider's git-native workflow is a meaningful safety win."
+        },
+        {
+          "title": "Mixing Models Mid-Session",
+          "body": "Use Claude Sonnet for understanding the codebase. Switch to DeepSeek to write the boilerplate. Drop to a local Llama for the sensitive parts you don't want hitting a third-party API. All in one conversation, all in one workflow."
+        },
+        {
+          "title": "Audit-Friendly Workflows for Regulated Industries",
+          "body": "Every Aider change is a git commit with attribution to the AI plus the prompt that drove it. For teams in financial services, healthcare, or government that need to prove what AI did and why — Aider's audit trail is built in, no extra tooling needed."
+        },
+        {
+          "title": "Self-Hosted in Air-Gapped Environments",
+          "body": "Aider works with local models (via LiteLLM, Ollama, or similar). Combine it with a self-hosted Llama or DeepSeek instance and you have a fully air-gapped AI pair programmer — no data leaves your network. Useful for defence, healthcare, or any domain with strict data residency rules."
+        },
+        {
+          "title": "Teaching and Learning the Tool Itself",
+          "body": "Aider is open source. You can read the codebase to understand exactly how an AI coding agent works under the hood. For builders curious about the architecture (or wanting to fork it for a custom workflow), Aider is the only option here that lets you do that."
+        }
+      ]
+    },
+    {
+      "slug": "github-copilot",
+      "name": "GitHub Copilot",
+      "tagline": "The AI most developers already pay for, now with agent mode",
+      "category": "coding",
+      "categoryLabel": "Coding Agent",
+      "url": "https://github.com/features/copilot",
+      "openSource": false,
+      "techLevel": "developer",
+      "pricing": "Free tier: 2,000 completions + 50 chat messages per month. Pro: $10/month. Business: $19/user/month. Enterprise: $39/user/month with policy controls and IP indemnification.",
+      "rating": 4,
+      "verdict": "The default AI coding tool by reach — most developers already have it through their GitHub plan. Started as autocomplete, now has real agent mode. Best for builders who want one tool that lives where they already work.",
+      "bestFor": "Teams already on GitHub Enterprise or Business. Developers who want autocomplete-plus-agent in a single tool without leaving VS Code or JetBrains. IT teams that need a corporate-friendly procurement story.",
+      "notFor": "Builders who want the most agentic tool on the market — Claude Code and Cursor are further along on multi-file autonomous workflows. Anyone unhappy with Microsoft / GitHub for vendor reasons.",
+      "description": "GitHub Copilot is the most-installed AI coding tool by a wide margin — it ships with most GitHub plans, integrates natively into VS Code and JetBrains, and benefits from Microsoft's enterprise procurement reach. The product has evolved meaningfully: started as line-completion autocomplete (2021), added Chat (2023), then Agent Mode (2025) for multi-file edits. As of 2026 it can run coordinated changes across files, write tests, and create pull requests — though it's still catching up to Claude Code and Cursor on raw agentic depth. The model layer is multi-vendor: Copilot now uses GPT-5.5, Claude Sonnet 4.6, and others depending on the task. The headline trade-off is breadth vs depth: Copilot covers more workflows than any competitor (chat, autocomplete, agent, code review) but isn't the strongest at any single one. For builders who want one tool inside their existing IDE and don't want to adopt a separate CLI or fork of VS Code, Copilot is the path of least resistance.",
+      "pros": [
+        "Most-installed AI coding tool — bundled with GitHub Pro/Business/Enterprise plans",
+        "Multi-vendor model access: GPT-5.5, Claude Sonnet 4.6, others",
+        "Native VS Code, JetBrains, Visual Studio, Xcode, and Neovim integrations",
+        "Strong enterprise story: SSO, audit logs, IP indemnification, policy controls",
+        "Agent mode now ships multi-file edits and PR creation",
+        "Free tier is real — non-trivial usage allowance for individual developers"
+      ],
+      "cons": [
+        "Agent mode is newer and less mature than Claude Code or Cursor",
+        "Multi-vendor models can mean inconsistent behaviour across tasks",
+        "Microsoft / GitHub vendor lock-in if your stack already lives elsewhere",
+        "Slower feature velocity on agentic workflows than Claude Code",
+        "Code completion can suggest patterns from training data that don't match your codebase"
+      ],
+      "useCases": [
+        {
+          "title": "Inline Code Completion While Writing",
+          "body": "The original Copilot use case and still its strongest. As you type, Copilot suggests the next line, the next function, or the next test. For boilerplate and well-known patterns, it's fast and accurate. The newer models give better context awareness across files in the same project."
+        },
+        {
+          "title": "Chat Sidebar for Quick Questions",
+          "body": "Highlight a function, ask 'what does this do?' or 'how would I optimise this?' Copilot answers in a sidebar without leaving the editor. Faster than switching to a browser tab. Strong for code review and learning unfamiliar code."
+        },
+        {
+          "title": "Agent Mode for Multi-File Changes",
+          "body": "Newer feature (2025+). Describe a change — 'rename this API endpoint and update all 12 call sites' — and Copilot Agent makes the edits across files, runs tests, and shows you a diff. Catching up to Claude Code on autonomy but not yet at parity."
+        },
+        {
+          "title": "Pull Request Summaries and Reviews",
+          "body": "Copilot can summarise a PR for reviewers, explain what changed, and flag potential issues. The GitHub-native integration is the differentiator — works inside the PR UI without copy-paste."
+        },
+        {
+          "title": "Test Generation",
+          "body": "Right-click a function, ask Copilot to generate tests. The output covers happy paths and basic edge cases. Useful before refactors or when ramping up coverage on legacy code."
+        },
+        {
+          "title": "Workspace Mode for Larger Tasks",
+          "body": "For tasks that span multiple files but stay scoped — adding a new feature, refactoring a module — Workspace mode keeps the conversation organised across the work. Less powerful than Claude Code's agentic loop but easier to manage."
+        }
+      ]
+    },
+    {
+      "slug": "augment",
+      "name": "Augment Code",
+      "tagline": "The agentic coding tool built for large codebases",
+      "category": "coding",
+      "categoryLabel": "Coding Agent",
+      "url": "https://www.augmentcode.com",
+      "openSource": false,
+      "techLevel": "developer",
+      "pricing": "Free trial available. Pro: ~$50/user/month for individuals. Team and Enterprise tiers with custom pricing. Includes the Augment Engine for codebase indexing.",
+      "rating": 4,
+      "verdict": "Strong agentic coding tool with deep codebase context. Best for builders working in large monorepos where tools like Cursor or Copilot lose the thread. Pricing is higher than most competitors.",
+      "bestFor": "Engineering teams in large codebases (100k+ files, multi-million lines) where context-awareness across the repo matters more than raw model speed. Strong for refactoring legacy systems.",
+      "notFor": "Solo developers or small projects — the Augment Engine's codebase indexing is overkill for a 50-file repo. Cursor or Claude Code give better value at smaller scale.",
+      "description": "Augment Code raised over $250M to build an agentic coding tool optimised for large codebases. The differentiator is the Augment Engine — a codebase indexing layer that gives the AI agent deep, real-time context about every file in your repo, not just the ones you have open. For teams in monorepos with hundreds of thousands of files, this is a meaningful edge: the agent understands cross-cutting concerns, can trace dependency graphs, and makes refactors that respect existing architecture. Built for IDE workflows (VS Code, JetBrains) plus a chat interface. Pricing is higher than Claude Code or Cursor — the Augment team is positioning toward engineering organisations that can justify per-seat costs against the productivity gain. For small teams or solo developers, the codebase-context advantage doesn't pay back the price; for large engineering orgs, it can.",
+      "pros": [
+        "Augment Engine indexes the full codebase in real time — strongest large-monorepo story",
+        "Agentic workflows with multi-file refactoring across many files",
+        "VS Code and JetBrains integrations",
+        "Strong for legacy refactoring and architectural changes",
+        "Backed by serious funding (~$250M) and engineering team"
+      ],
+      "cons": [
+        "Pricing significantly higher than Claude Code, Cursor, or Aider",
+        "Overkill for small projects or solo developers",
+        "Closed source — no self-hosting option",
+        "Smaller community and integration ecosystem than Cursor",
+        "Less differentiated story for non-monorepo workflows"
+      ],
+      "useCases": [
+        {
+          "title": "Refactoring Across Large Monorepos",
+          "body": "The category Augment was built for. Rename a function used across 500 files, change an API contract that touches twelve services, modernise a legacy module — Augment's codebase indexing keeps the AI agent oriented through the whole change."
+        },
+        {
+          "title": "Onboarding Engineers to Unfamiliar Code",
+          "body": "New hire on day one can ask Augment to explain how authentication works across the codebase, where business logic lives, what the testing patterns are. The deep context-awareness reduces 'where do I start' time meaningfully."
+        },
+        {
+          "title": "Architectural Compliance Checks",
+          "body": "Tell Augment your architectural rules — 'database calls only happen in the data layer' — and it can scan the codebase to find violations. Useful before merging large changes or during periodic audits."
+        },
+        {
+          "title": "Multi-File Bug Investigation",
+          "body": "A bug spans the front-end, the API, and a background worker. Augment can trace the request path through all three, identify the failure point, and propose a coordinated fix. Single-file tools struggle here."
+        },
+        {
+          "title": "Dependency and Library Migration",
+          "body": "Migrating from one ORM to another, upgrading a major framework version, replacing an internal library across the org. Augment's whole-codebase awareness makes these multi-week projects feasible in days."
+        },
+        {
+          "title": "Senior Engineer Force Multiplier",
+          "body": "For senior engineers responsible for cross-cutting concerns (architecture, performance, security), Augment acts as a junior engineer with perfect codebase memory. The cost is justified at senior salary levels."
+        }
+      ]
+    },
+    {
+      "slug": "amp",
+      "name": "Amp",
+      "tagline": "Sourcegraph's agentic coding tool with codebase context built in",
+      "category": "coding",
+      "categoryLabel": "Coding Agent",
+      "url": "https://ampcode.com",
+      "openSource": false,
+      "techLevel": "developer",
+      "pricing": "Free tier with usage limits. Paid tiers via Sourcegraph subscription. Bundled with Sourcegraph Code Search for teams already on the platform.",
+      "rating": 4,
+      "verdict": "Sourcegraph's agentic coding tool, leveraging years of investment in code search and indexing. Strong context-awareness story for teams already running Sourcegraph; less compelling as a standalone purchase.",
+      "bestFor": "Engineering teams already paying for Sourcegraph Code Search who want to add an AI agent that reuses the existing codebase index. Free tier is generous enough for individual evaluation.",
+      "notFor": "Teams not on Sourcegraph — the standalone story is less differentiated than Claude Code or Augment. Builders who want a simpler CLI experience.",
+      "description": "Amp is Sourcegraph's agentic coding tool, launched in 2025. The differentiator is leverage — Sourcegraph has spent years building Cody (their AI coding assistant) and the Sourcegraph Code Search engine, which indexes large codebases for fast semantic search. Amp builds on that infrastructure: when the agent needs context about a function, a class, a usage pattern, it queries Sourcegraph's pre-built index rather than scanning files at runtime. For teams already running Sourcegraph, this means faster and more accurate context retrieval. The free tier is real and useful for individual evaluation. Where Amp is less compelling is for teams not already on Sourcegraph — the standalone value proposition vs Claude Code, Augment, or Cursor isn't as differentiated. The product is solid; the strategic moat is the Sourcegraph install base.",
+      "pros": [
+        "Built on Sourcegraph's mature code-search and indexing infrastructure",
+        "Free tier with meaningful usage allowance",
+        "Strong codebase-context story without separate indexing setup",
+        "Native integration with Sourcegraph Code Search",
+        "Sourcegraph's enterprise compliance story (SOC 2, on-prem options) carries over"
+      ],
+      "cons": [
+        "Standalone value less compelling than Claude Code or Augment for non-Sourcegraph teams",
+        "Newer to agentic coding than competitors with longer track records",
+        "Smaller community vs Cursor or Copilot",
+        "Locked into Sourcegraph as the indexing/context layer",
+        "Best fit narrows to teams already paying for Sourcegraph"
+      ],
+      "useCases": [
+        {
+          "title": "Codebase Search Augmented with Agent Edits",
+          "body": "Sourcegraph users have always been able to find code fast. Amp adds the layer where the AI can act on what it finds — search for all usages of a deprecated API, then generate the migration code automatically."
+        },
+        {
+          "title": "Context-Heavy Refactors in Large Codebases",
+          "body": "For teams already running Sourcegraph at scale (often 10M+ LOC), Amp inherits the existing context layer. The agent's understanding of the codebase is essentially free at query time because the indexing has already happened."
+        },
+        {
+          "title": "Code Review with Cross-Repo Awareness",
+          "body": "If your team has multiple repos indexed in Sourcegraph, Amp can review a PR with awareness of how the changes affect downstream services in other repos. Single-repo tools miss this."
+        },
+        {
+          "title": "Agentic Code Migrations",
+          "body": "Major migrations — language version upgrades, framework changes, library replacements — that span multiple files. Amp's indexing speeds the work; the agentic mode executes the changes."
+        },
+        {
+          "title": "Free-Tier Evaluation Path",
+          "body": "Unlike most paid coding agents, Amp's free tier is usable for serious individual evaluation. A way to test whether the Sourcegraph context layer is worth the team-tier upgrade."
+        },
+        {
+          "title": "Compliance-Heavy Engineering Orgs",
+          "body": "Sourcegraph's SOC 2 and on-prem deployment options carry over to Amp. For regulated industries that need full audit trails and self-hosting, Amp is one of the few agentic coding tools that fits the compliance story."
+        }
+      ]
+    },
+    {
+      "slug": "openai-codex",
+      "name": "OpenAI Codex",
+      "tagline": "OpenAI's terminal-native coding agent",
+      "category": "coding",
+      "categoryLabel": "Coding Agent",
+      "url": "https://developers.openai.com/codex/",
+      "openSource": true,
+      "techLevel": "developer",
+      "pricing": "Pro $20/month base + usage-based credits ($20/mo of frontier model included). Pro+ $60/month (3× usage). Ultra $200/month (20× usage). No free tier. Rolling 5-hour credit limits frustrate heavy users.",
+      "rating": 3.5,
+      "verdict": "The fastest-growing coding agent on the market — 3 million weekly active users, 70%+ MoM token growth. Rolling 5-hour credit limits are a real operational pain. Best if you're already locked into OpenAI's ecosystem.",
+      "bestFor": "Developers committed to GPT-5+ models who want a Claude Code equivalent without leaving the OpenAI ecosystem. Teams that prioritise the most recent OpenAI features.",
+      "notFor": "Anyone who needs predictable monthly costs (rolling credit limits cause unpredictable workflow blocks) or who wants to use Claude or Gemini in their workflow.",
+      "description": "Codex CLI is OpenAI's answer to Claude Code: a Rust-based terminal coding agent with 75.6k GitHub stars and 3M weekly active users. The product has shipped fast — multi-agent v2 workflows with inter-agent messaging, integrated terminal feedback (it can read your dev server output and build logs in-thread), Windows native plus WSL2 support. The headline criticism from the community is the rolling 5-hour credit window: heavy Monday morning use can block you out of Codex by Monday afternoon. The June 2025 pricing overhaul kept the $20 base but moved to usage-based credits — predictable for light users, painful for heavy ones. Token usage is growing 70%+ month over month and Codex is currently outselling Cursor in some metrics. Model lock-in to OpenAI is the structural trade-off.",
+      "pros": [
+        "Fastest-growing tool in the category — 3M weekly active users",
+        "Multi-agent v2 workflows with inter-agent messaging",
+        "Integrated terminal reader — sees stdout/stderr from your dev server",
+        "Rust-based for speed and efficiency",
+        "Strong cross-platform: Windows native, macOS, Linux, WSL2",
+        "Open source CLI — Apache 2.0 licensed"
+      ],
+      "cons": [
+        "Rolling 5-hour credit limits cause unpredictable workflow blocks",
+        "OpenAI model lock-in — can't use Claude or Gemini",
+        "No model selection — system chooses automatically",
+        "Pricing increased ~20% in 2026 even though models got more efficient",
+        "MCP server support unclear — limited extensibility vs Claude Code"
+      ],
+      "githubUrl": "https://github.com/openai/codex",
+      "githubStars": "75.6k",
+      "license": "Apache 2.0",
+      "useCases": [
+        {
+          "title": "Multi-File Refactoring Across Services",
+          "body": "Codex's v2 multi-agent workflows shine here. Dispatch one agent per service, have a coordinator agent track cross-service dependencies, and the work happens in parallel. For monorepos and microservices architectures, this is faster than single-agent tools."
+        },
+        {
+          "title": "Bug Triage from Production Errors",
+          "body": "Paste a stack trace, Codex traces the call path, identifies the root cause, patches the fix, and runs your tests to confirm. Strong terminal integration means it can read the actual error output, not just what you paste in."
+        },
+        {
+          "title": "Test Generation for Legacy Code",
+          "body": "Point Codex at an under-tested module and ask it to write tests. The terminal reader watches the test runs, catches failures, and iterates on the test code until coverage is solid. Useful before a refactor."
+        },
+        {
+          "title": "PR Creation from Tickets",
+          "body": "Give Codex a Linear or GitHub issue, it reads the relevant code, makes the changes, runs your tests, and opens a PR with a description of what changed and why. The OpenAI integration story is strong if your team is on the GPT stack."
+        },
+        {
+          "title": "Database Migration Scripts",
+          "body": "Schema changes, data migrations, rollback plans. Codex generates the SQL, the migration code in your ORM, and the test harness. The terminal reader watches the migration run on a staging copy and reports back."
+        },
+        {
+          "title": "CI/CD Pipeline Generation",
+          "body": "Describe what you want to ship and Codex writes the GitHub Actions or GitLab CI YAML, including build, test, and deploy stages. The integration with OpenAI's broader product suite makes the GitHub Actions story particularly polished."
+        }
+      ]
+    },
+    {
+      "slug": "manus",
+      "name": "Manus AI",
+      "tagline": "The autonomous AI agent that went viral in early 2025",
+      "category": "harness",
+      "categoryLabel": "Autonomous Agent",
+      "url": "https://manus.im",
+      "openSource": false,
+      "techLevel": "no-code",
+      "pricing": "Free tier with limited daily usage. Paid plans start at ~$39/month. Enterprise pricing on request. Pricing has shifted multiple times in 2025–2026.",
+      "rating": 3.5,
+      "verdict": "The autonomous AI agent that went viral in early 2025. Genuinely capable for browser-based research tasks; less differentiated for builders who already have Claude Code or a coding agent setup.",
+      "bestFor": "Non-technical builders who want an autonomous agent that can browse the web, research, and produce structured deliverables — without setting up a CLI or writing prompts repeatedly.",
+      "notFor": "Developers who already have Claude Code, OpenAI Codex, or a similar agentic setup. The autonomous-browser angle is less useful when you already have a code-aware agent that can browse via MCP.",
+      "description": "Manus AI from Butterfly Effect AI launched in early 2025 and went viral on social media for autonomous demos: 'do this multi-step research task' and the agent would open a browser, navigate sites, fill forms, write reports. The product's capabilities have been real but uneven — some tasks land impressively, others fail silently or take long enough that watching is painful. The pricing model has shifted multiple times. For builders evaluating autonomous agents, Manus is worth a free-tier trial; for builders already invested in Claude Code or another agentic stack, the differentiator gets thinner. Strong for non-technical users who want an agent that 'just does the thing' without prompt engineering.",
+      "pros": [
+        "Genuinely autonomous — can complete multi-step tasks without per-step prompting",
+        "Browser-native — handles workflows that require navigating real websites",
+        "No-code interface, accessible to non-developers",
+        "Free tier available for evaluation",
+        "Strong viral mindshare — clients sometimes recognise the brand"
+      ],
+      "cons": [
+        "Pricing has shifted multiple times — verify current rates before committing",
+        "Quality varies significantly by task type",
+        "Less useful for builders who already have a code-aware agentic setup",
+        "Closed-source, China-based provider — data residency may matter for some",
+        "Slower than direct API approaches for tasks that don't need browser access"
+      ],
+      "useCases": [
+        {
+          "title": "Multi-Step Research Tasks",
+          "body": "Give Manus a research brief — 'find the top 10 AI agent startups, summarise each in 200 words, deliver as a PDF' — and it will browse, gather, and produce. Faster than doing it yourself, slower than asking an LLM with web search."
+        },
+        {
+          "title": "Form-Filling Across Multiple Sites",
+          "body": "Submitting the same information across multiple platforms (job applications, vendor signups, directory listings). Manus can run through each site and complete the forms."
+        },
+        {
+          "title": "Competitive Intelligence Gathering",
+          "body": "Track what competitors are doing — pricing changes, feature launches, blog posts. Manus can run weekly to compile updates from a list of target companies."
+        },
+        {
+          "title": "Content Aggregation",
+          "body": "Pull recent blog posts, press releases, or social mentions on a topic and compile into a single document. Useful for newsletters and competitive briefings."
+        }
+      ]
+    },
+    {
+      "slug": "retell-ai",
+      "name": "Retell AI",
+      "tagline": "Production-grade voice agents for sales and support calls",
+      "category": "voice",
+      "categoryLabel": "Voice AI Agent",
+      "url": "https://retellai.com",
+      "openSource": false,
+      "techLevel": "low-code",
+      "pricing": "Pay-per-minute usage: ~$0.07–0.10 per minute of voice conversation. Free tier with limited minutes. Volume discounts at enterprise scale.",
+      "rating": 4,
+      "verdict": "The most builder-friendly voice agent platform — clean SDK, predictable pricing, low latency. Best for teams shipping production voice agents without building infrastructure from scratch.",
+      "bestFor": "B2B teams deploying voice agents for outbound sales, customer support, or appointment booking. Strong for builders who want a managed voice infrastructure without owning the telephony stack.",
+      "notFor": "Teams that need full control over the voice synthesis pipeline (use ElevenLabs Conversational AI). Teams with very low call volume — the per-minute pricing pays back at scale, not for occasional use.",
+      "description": "Retell AI is the voice-agent platform most builders default to in 2026. The product handles the hard parts — sub-second latency for natural conversation, telephony integration, call routing, transcription, function-calling — and exposes a clean SDK on top. You bring the prompt and the business logic; Retell handles the voice infrastructure. Pricing is straightforward per-minute, which most teams can model directly. Used by sales teams running outbound, support teams handling tier-1 tickets, and operations teams automating appointment scheduling. The trade-off is lock-in to Retell's stack — voice quality, latency profile, and routing logic are all theirs. For teams that need ownership at that level, ElevenLabs Conversational or building on Twilio + a separate LLM is the alternative.",
+      "pros": [
+        "Sub-second latency for natural-feeling conversation",
+        "Built-in telephony — bring a phone number, plug in",
+        "Function-calling support for CRM updates, calendar booking, etc.",
+        "Predictable per-minute pricing scales linearly with volume",
+        "Production-grade — used by hundreds of B2B teams in 2026"
+      ],
+      "cons": [
+        "Per-minute pricing adds up at very high volume",
+        "Lock-in to Retell's voice stack",
+        "Less flexibility than building on raw infrastructure",
+        "Voice quality is good but not the best on the market",
+        "Customer support response times vary"
+      ],
+      "useCases": [
+        {
+          "title": "Outbound Sales Calls",
+          "body": "Run an AI agent that calls prospects, qualifies them against your ICP criteria, books a meeting if qualified, and updates your CRM. Used by SDR-replacement workflows."
+        },
+        {
+          "title": "Tier-1 Customer Support",
+          "body": "Handle routine support calls — order status, password resets, FAQ — and escalate to a human only when the agent can't resolve. Deflects 60–80% of inbound call volume on simple workflows."
+        },
+        {
+          "title": "Appointment Booking and Confirmation",
+          "body": "Outbound calls to confirm appointments, reschedule no-shows, or proactively book recurring services. Healthcare, home services, and salons are common use cases."
+        },
+        {
+          "title": "Lead Qualification",
+          "body": "Inbound call from a marketing campaign — Retell agent qualifies the lead, books the meeting, hands off to sales. Faster than human SDRs and runs 24/7."
+        },
+        {
+          "title": "Survey and Feedback Collection",
+          "body": "Post-purchase or post-service satisfaction calls. Higher response rates than email surveys; data lands directly in your CRM or analytics stack."
+        }
+      ]
+    },
+    {
+      "slug": "vapi",
+      "name": "Vapi",
+      "tagline": "Voice agent infrastructure for developers",
+      "category": "voice",
+      "categoryLabel": "Voice AI Agent",
+      "url": "https://vapi.ai",
+      "openSource": false,
+      "techLevel": "developer",
+      "pricing": "Pay-per-minute: ~$0.05–0.08 per minute, slightly cheaper than Retell at scale. Free tier for evaluation. Volume discounts.",
+      "rating": 4,
+      "verdict": "Developer-first voice agent infrastructure with strong customisation hooks. Best for teams that want more control over the voice pipeline than Retell allows but don't want to build from scratch.",
+      "bestFor": "Engineering teams building production voice products who need fine control over the model, voice synthesis provider, and call routing. Strong API and webhook story.",
+      "notFor": "Non-technical teams — Retell's SDK is more accessible. Teams that don't need the customisation depth Vapi offers.",
+      "description": "Vapi is positioned as the developer's voice infrastructure. Where Retell hides the voice stack, Vapi exposes it: pick your LLM (Claude, GPT, Gemini), pick your voice synthesis provider (ElevenLabs, PlayHT, Cartesia), pick your transcription service. The flexibility comes with a steeper learning curve — you're configuring more pieces — but for teams shipping voice products at scale or with specific quality requirements, the control is meaningful. Slightly cheaper than Retell on per-minute pricing, with stronger webhook and API surface for integrations. Used by voice-product companies that want to white-label and customise.",
+      "pros": [
+        "Multi-vendor model and voice provider support",
+        "Cheaper per-minute pricing than Retell at scale",
+        "Strong webhook and API customisation",
+        "Good for white-labelled voice products",
+        "Active developer community and docs"
+      ],
+      "cons": [
+        "Steeper learning curve than Retell — more configuration to do",
+        "Quality depends on which voice provider you select",
+        "Less polished onboarding for non-developers",
+        "Documentation occasionally lags new features"
+      ],
+      "useCases": [
+        {
+          "title": "Custom Voice Products at Scale",
+          "body": "Building a voice product as part of your SaaS (e.g. an AI receptionist feature). Vapi's customisation lets you pick voice quality and pricing trade-offs that match your product's tier."
+        },
+        {
+          "title": "White-Labelled Voice for Agencies",
+          "body": "Agencies offering voice agent services to clients. Vapi's flexibility lets you offer different voice quality tiers without locking into one provider."
+        },
+        {
+          "title": "Multi-Language Support",
+          "body": "Switching voice synthesis providers per language to get the best quality for each market. Harder to do with Retell's bundled stack."
+        },
+        {
+          "title": "Cost-Optimised High-Volume Workflows",
+          "body": "When voice quality is acceptable from cheaper providers (Cartesia, PlayHT) and you want to keep per-minute costs down. Vapi's flexibility lets you optimise."
+        },
+        {
+          "title": "Voice Agents with Custom Tools",
+          "body": "Heavy function-calling workflows — agents that interact with multiple internal systems during a call. Vapi's webhook architecture handles this cleanly."
+        }
+      ]
+    },
+    {
+      "slug": "bland-ai",
+      "name": "Bland AI",
+      "tagline": "Phone-first AI voice agents at high volume",
+      "category": "voice",
+      "categoryLabel": "Voice AI Agent",
+      "url": "https://bland.ai",
+      "openSource": false,
+      "techLevel": "low-code",
+      "pricing": "Pay-per-minute: ~$0.09–0.12 per minute. Enterprise plans for high-volume customers. Free trial credits.",
+      "rating": 3.5,
+      "verdict": "Phone-call-focused voice agents with strong throughput. Best for high-volume telephony use cases like outbound sales campaigns. Less polished for nuanced conversational work.",
+      "bestFor": "Teams running high-volume outbound phone campaigns — SDR fleets, lead qualification, appointment setting at scale. Direct phone integration is its strength.",
+      "notFor": "Teams that need natural-sounding conversational voice for premium customer experiences. Bland skews toward throughput over polish.",
+      "description": "Bland AI is the most phone-native of the major voice agent platforms — built first for outbound and inbound phone calls at high volume, with web/SDK use cases as a secondary surface. Strong infrastructure for running campaigns: 1,000 simultaneous calls, automatic retry logic, transcript storage, CRM webhooks. The voice quality is acceptable but less natural than ElevenLabs-based platforms; latency is slightly higher than Retell. For B2B outbound campaigns where the goal is throughput and qualification rather than premium conversational UX, Bland is the right tool. For high-touch customer service or sales calls where voice quality and conversational nuance matter, look elsewhere.",
+      "pros": [
+        "Built for high-volume phone campaigns",
+        "Massive concurrent call capacity",
+        "Strong outbound campaign management features",
+        "Direct telephony integration, no Twilio plumbing required",
+        "CRM webhook support for Salesforce, HubSpot, etc."
+      ],
+      "cons": [
+        "Voice quality is less natural than ElevenLabs-based competitors",
+        "Slightly higher latency than Retell",
+        "Less developer-friendly than Vapi",
+        "Pricing slightly higher than Vapi per minute",
+        "More opinionated platform — less customisation"
+      ],
+      "useCases": [
+        {
+          "title": "High-Volume Outbound SDR Campaigns",
+          "body": "Running thousands of qualification calls per day. Bland's concurrent call capacity and campaign tooling are built for exactly this. Replaces or augments human SDR teams."
+        },
+        {
+          "title": "Inbound Lead Routing",
+          "body": "Capture inbound calls from marketing campaigns, qualify, route to the right human or book directly into a calendar. Sub-30-second handoff times."
+        },
+        {
+          "title": "Appointment Reminders at Scale",
+          "body": "For services with high appointment volume (healthcare, home services), Bland can run reminder calls and confirm or reschedule, reducing no-shows."
+        },
+        {
+          "title": "Survey Calls",
+          "body": "Post-service satisfaction surveys at volumes too high for a human team to handle. Lower-cost alternative to traditional call-centre survey work."
+        },
+        {
+          "title": "Account Receivable Follow-Ups",
+          "body": "Past-due reminder calls. Operationally simpler than human collections for the early-stage workflow."
+        }
+      ]
+    },
+    {
+      "slug": "elevenlabs-conversational",
+      "name": "ElevenLabs Conversational AI",
+      "tagline": "Voice agents with the best-in-class voice synthesis",
+      "category": "voice",
+      "categoryLabel": "Voice AI Agent",
+      "url": "https://elevenlabs.io/conversational-ai",
+      "openSource": false,
+      "techLevel": "low-code",
+      "pricing": "Pay-per-minute, premium tier: ~$0.10–0.15 per minute. Voice synthesis quality is the differentiator. Free trial credits available.",
+      "rating": 4,
+      "verdict": "The best-sounding voice agent platform on the market. Built on ElevenLabs' industry-leading voice synthesis. Worth the premium when voice quality is part of the product.",
+      "bestFor": "Premium customer experiences where voice quality is part of the brand — concierge services, high-end B2B sales, healthcare conversations. Also strong for multilingual deployments.",
+      "notFor": "High-volume cost-sensitive use cases — Bland or Vapi are cheaper at scale. Teams that don't need premium voice quality.",
+      "description": "ElevenLabs Conversational AI is built on top of ElevenLabs' industry-leading voice synthesis. The voice quality is the differentiator: in blind tests, ElevenLabs voices are consistently rated more natural and emotionally accurate than competitors. The conversational layer adds the agent infrastructure — telephony, function-calling, multi-turn memory — but the headline feature is voice. Used by premium brands (luxury, healthcare, financial services) where the customer's first impression is the voice. Multilingual support is also strong — ElevenLabs handles 30+ languages with quality that rivals native-language alternatives. Pricing is the highest in the category, justified by quality.",
+      "pros": [
+        "Best-in-class voice quality — most natural-sounding agent voices",
+        "Strong multilingual support (30+ languages with high quality)",
+        "Voice cloning available for custom brand voices",
+        "Used by premium brands where voice quality matters",
+        "Same voice tech as ElevenLabs' standalone synthesis product"
+      ],
+      "cons": [
+        "Highest per-minute pricing in the category",
+        "Less developer customisation than Vapi",
+        "Newer to the conversational layer than Retell or Bland",
+        "Higher latency than Retell on some calls",
+        "Premium positioning means feature gaps in lower tiers"
+      ],
+      "useCases": [
+        {
+          "title": "Premium Customer Service",
+          "body": "Luxury brands, high-end services, financial firms where the customer's voice experience is part of the product. ElevenLabs' voice quality protects brand perception in ways cheaper platforms can't."
+        },
+        {
+          "title": "Multilingual Sales and Support",
+          "body": "Global B2B teams running voice agents across multiple languages. ElevenLabs' multilingual quality is the strongest in the category — switches between languages mid-call cleanly."
+        },
+        {
+          "title": "Healthcare Conversations",
+          "body": "Pre-appointment intake, prescription reminders, follow-up checks. Voice quality matters disproportionately in healthcare — patients respond better to natural voices."
+        },
+        {
+          "title": "Custom Brand Voice Agents",
+          "body": "Voice cloning lets you deploy an agent that sounds like your founder, your brand voice, or a real human team member. Differentiator vs generic AI voices."
+        },
+        {
+          "title": "Audiobook and Long-Form Read-Aloud",
+          "body": "Edge case but real — ElevenLabs Conversational can power audiobook-style interactions for accessibility products and educational tools."
+        }
+      ]
+    },
+    {
+      "slug": "microsoft-copilot-studio",
+      "name": "Microsoft Copilot Studio",
+      "tagline": "Enterprise AI agents built for the Microsoft stack",
+      "category": "enterprise",
+      "categoryLabel": "Enterprise platform",
+      "url": "https://www.microsoft.com/en-us/microsoft-copilot/microsoft-copilot-studio",
+      "openSource": false,
+      "techLevel": "low-code",
+      "pricing": "$200/month per 25,000 messages, plus Microsoft 365 licensing.",
+      "rating": 3,
+      "verdict": "Best AI agent platform for Microsoft-first organizations. Outside a Teams/SharePoint/Dynamics environment, there's no reason to use it.",
+      "bestFor": "Large organizations already running on Microsoft 365, Teams, SharePoint, and Dynamics.",
+      "notFor": "Companies not primarily on the Microsoft stack. The integration depth is Microsoft-native; the rest of the ecosystem is an afterthought.",
+      "description": "Copilot Studio's main advantage is exactly what you'd expect: it's deeply integrated with everything Microsoft. If your team lives in Teams, your data is in SharePoint, your CRM is Dynamics, and your IT department is Microsoft-certified — Copilot Studio gives you the best native integrations and the enterprise compliance story to match. The product has improved significantly in 2025. Outside a Microsoft-first environment, the overhead makes it a poor choice compared to Lindy, Relevance AI, or n8n.",
+      "pros": [
+        "Native Teams, SharePoint, and Dynamics integration",
+        "Enterprise-grade security and compliance certifications",
+        "Familiar to IT teams already in the Microsoft ecosystem",
+        "Improving rapidly — meaningful investment from Microsoft"
+      ],
+      "cons": [
+        "Only makes sense if you're a Microsoft shop",
+        "Expensive outside enterprise licensing deals",
+        "Slower iteration pace than independent platforms",
+        "Heavy deployment and governance overhead"
+      ]
+    },
+    {
+      "slug": "azure-ai-agent-service",
+      "name": "Azure AI Agent Service",
+      "tagline": "Microsoft's developer-focused agent platform on Azure",
+      "category": "enterprise",
+      "categoryLabel": "Enterprise platform",
+      "url": "https://learn.microsoft.com/en-us/azure/ai-services/agents/",
+      "openSource": false,
+      "techLevel": "developer",
+      "pricing": "Usage-based on Azure: per-token AI Foundry model costs + Azure infrastructure. No flat subscription. Tied to Azure account billing.",
+      "rating": 3.5,
+      "verdict": "Microsoft's developer-grade agent service running on Azure AI Foundry. Different audience from Copilot Studio — for engineering teams building production agents, not ops teams configuring no-code workflows.",
+      "bestFor": "Engineering teams already on Azure who want to build production AI agents with full code control, Azure-native security, and integration with Azure data services.",
+      "notFor": "Non-developers — Copilot Studio is the no-code path on the Microsoft stack. Teams not on Azure — the integration depth doesn't pay off elsewhere.",
+      "description": "Azure AI Agent Service is Microsoft's developer-grade agent platform, separate from Copilot Studio. Where Copilot Studio is the no-code path for ops teams, Agent Service is the SDK-and-API path for engineering teams. Built on Azure AI Foundry (Microsoft's model and tools layer), it gives you OpenAI models, Azure-native security, function-calling, knowledge connectors to Azure SharePoint and Fabric, and the same enterprise compliance story as the rest of Azure. Used by enterprise dev teams that have Azure procurement in place and need to ship production agents inside Microsoft's data boundary. Pricing is usage-based on the Azure stack — no flat subscription, just per-token model costs plus standard Azure infrastructure. The trade-off is the usual Azure trade-off: powerful and enterprise-ready, but slower to iterate on than independent platforms.",
+      "pros": [
+        "Azure-native security, compliance, and identity (AAD, RBAC, private networking)",
+        "Direct integration with Azure data services (Cosmos DB, Fabric, AI Search)",
+        "Access to OpenAI models inside Microsoft's data boundary",
+        "Production-grade SDKs in Python, .NET, JavaScript",
+        "Pay-as-you-go pricing — no enterprise contract required to start"
+      ],
+      "cons": [
+        "Only makes sense if you're already on Azure",
+        "Slower feature velocity than independent agent platforms",
+        "Documentation can be hard to navigate (typical Microsoft docs)",
+        "Less polished developer experience than Anthropic or OpenAI direct",
+        "Enterprise procurement overhead even on pay-as-you-go"
+      ],
+      "useCases": [
+        {
+          "title": "Production Agents Inside Azure Data Boundaries",
+          "body": "When data residency requirements mean your AI agent has to run inside your Azure tenancy, Agent Service is built for it. SOC 2, HIPAA, and FedRAMP-aligned where Azure's broader stack is."
+        },
+        {
+          "title": "Enterprise Document Q&A with Azure AI Search",
+          "body": "Connect Agent Service to Azure AI Search-indexed content (SharePoint, Fabric, Blob Storage) and you have a knowledge-grounded agent that answers from your company's documents."
+        },
+        {
+          "title": "Multi-Agent Workflows with Identity Tracking",
+          "body": "Use Microsoft Entra ID to track which agent did what, with full audit trails. Critical for regulated industries."
+        },
+        {
+          "title": "Custom Copilot Backends",
+          "body": "When you've outgrown the no-code limits of Copilot Studio but still want to ship inside the Microsoft ecosystem, Agent Service gives you the SDK control."
+        },
+        {
+          "title": "Cross-Service Automation",
+          "body": "Agents that read from Cosmos DB, write to Fabric, query SharePoint, and trigger Logic Apps. Tight integration with the rest of Azure."
+        }
+      ]
+    },
+    {
+      "slug": "vertex-ai-agent-builder",
+      "name": "Vertex AI Agent Builder",
+      "tagline": "Google Cloud's enterprise agent platform built on Gemini",
+      "category": "enterprise",
+      "categoryLabel": "Enterprise platform",
+      "url": "https://cloud.google.com/vertex-ai/generative-ai/docs/agent-builder",
+      "openSource": false,
+      "techLevel": "developer",
+      "pricing": "Usage-based on Google Cloud: per-token Gemini model costs + Vertex AI infrastructure. Free tier credits available for new accounts.",
+      "rating": 3.5,
+      "verdict": "Google's enterprise agent platform on Vertex AI. Strong if you're already on Google Cloud and want Gemini-native agents with BigQuery integration. Less compelling outside the Google stack.",
+      "bestFor": "Engineering teams on Google Cloud who want to build agents using Gemini's long-context capabilities and integrate directly with BigQuery, Cloud Storage, and Google Workspace.",
+      "notFor": "Teams not on Google Cloud — Vertex's value proposition is integration depth that doesn't transfer. Teams that want model flexibility — Vertex is Gemini-only.",
+      "description": "Vertex AI Agent Builder is Google Cloud's enterprise agent platform. Built on Vertex AI (Google's ML platform) and integrated with the Gemini model family, it offers grounding via Google Search, knowledge ingestion from Google Workspace and BigQuery, and the same enterprise compliance story as the rest of Google Cloud. The differentiator is Gemini's long-context window — agents can hold 1M+ tokens of context, useful for codebase analysis or long-document workflows. Where Vertex falls short is model flexibility (Gemini-only) and the usual cross-cloud friction if your stack isn't already on Google Cloud. For teams already invested in Google Workspace and BigQuery, it's a natural extension. For everyone else, the integration advantage doesn't pay off.",
+      "pros": [
+        "Gemini's 1M+ token context window — the largest on the market",
+        "Native integration with BigQuery, Cloud Storage, Google Workspace",
+        "Grounding with Google Search built in (real-time web data)",
+        "Google Cloud security, compliance, and IAM",
+        "Free tier credits for new accounts make evaluation easy"
+      ],
+      "cons": [
+        "Gemini-only — no Claude, GPT, or Llama support",
+        "Only makes sense if you're already on Google Cloud",
+        "Slower iteration than Anthropic or OpenAI direct",
+        "Documentation is dense and assumes Google Cloud familiarity",
+        "Enterprise contract overhead at scale"
+      ],
+      "useCases": [
+        {
+          "title": "BigQuery-Grounded Analytical Agents",
+          "body": "Agents that answer business questions by querying BigQuery directly. Vertex's native BigQuery integration is the strongest of any agent platform."
+        },
+        {
+          "title": "Long-Context Document Analysis",
+          "body": "Use Gemini's 1M+ token context window to analyse entire contracts, codebases, or document sets in a single pass. The longest context on the market."
+        },
+        {
+          "title": "Google Workspace Automation",
+          "body": "Agents that read from Google Drive, Gmail, Calendar, and Sheets, then take actions back. Native integration is cleaner than third-party connectors."
+        },
+        {
+          "title": "Real-Time Web Grounding",
+          "body": "Agents that need fresh web data — competitive intelligence, news monitoring, market research — get Google Search grounding built in."
+        },
+        {
+          "title": "Vertex AI Search Front-Ends",
+          "body": "When you're already using Vertex AI Search to index enterprise content, Agent Builder is the natural conversational layer on top."
+        }
+      ]
+    }
+  ]
+}

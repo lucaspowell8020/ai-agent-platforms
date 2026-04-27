@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/lucaspowell8020/ai-agent-platforms/main/platforms.schema.json",
+  "title": "AI Agent Platforms Dataset",
+  "description": "Hand-tested AI agent platforms with editorial verdicts and ratings. Source: https://agentshortlist.com",
+  "type": "object",
+  "required": [
+    "verifiedDate",
+    "verificationCadence",
+    "verificationMethod",
+    "license",
+    "platforms"
+  ],
+  "properties": {
+    "$schema": { "type": "string" },
+    "source": { "type": "string", "format": "uri" },
+    "sourceRepo": { "type": "string", "format": "uri" },
+    "verifiedDate": { "type": "string", "format": "date" },
+    "verificationCadence": { "type": "string" },
+    "verificationMethod": { "type": "string" },
+    "license": { "type": "string" },
+    "platforms": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/platform" }
+    }
+  },
+  "$defs": {
+    "platform": {
+      "type": "object",
+      "required": [
+        "slug",
+        "name",
+        "tagline",
+        "category",
+        "categoryLabel",
+        "url",
+        "openSource",
+        "techLevel",
+        "pricing",
+        "rating",
+        "verdict",
+        "bestFor",
+        "notFor",
+        "description",
+        "pros",
+        "cons"
+      ],
+      "properties": {
+        "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "name": { "type": "string" },
+        "tagline": { "type": "string" },
+        "category": {
+          "type": "string",
+          "enum": ["harness", "no-code", "workflow", "coding", "voice", "enterprise"]
+        },
+        "categoryLabel": { "type": "string" },
+        "url": { "type": "string", "format": "uri" },
+        "githubUrl": { "type": "string", "format": "uri" },
+        "githubStars": { "type": "string" },
+        "license": { "type": "string" },
+        "openSource": { "type": "boolean" },
+        "techLevel": {
+          "type": "string",
+          "enum": ["no-code", "low-code", "developer"]
+        },
+        "pricing": { "type": "string" },
+        "rating": { "type": "number", "minimum": 0, "maximum": 5 },
+        "verdict": { "type": "string" },
+        "bestFor": { "type": "string" },
+        "notFor": { "type": "string" },
+        "description": { "type": "string" },
+        "pros": { "type": "array", "items": { "type": "string" } },
+        "cons": { "type": "array", "items": { "type": "string" } },
+        "useCases": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["title", "body"],
+            "properties": {
+              "title": { "type": "string" },
+              "body": { "type": "string" }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
