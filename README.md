@@ -115,7 +115,7 @@ We built [agentshortlist.com](https://agentshortlist.com) — opinionated review
 - [agentshortlist.com](https://agentshortlist.com) — the publication
 - [The 2026 Shortlist](https://agentshortlist.com/shortlist) — narrative review of the top picks
 - [Agent Picker](https://agentshortlist.com/picker) — five-question quiz that uses this dataset
-- [ai-agent-pricing](https://github.com/lucaspowell8020/ai-agent-pricing) — sister repo with frontier model pricing
+- [ai-agent-pricing](https://github.com/lucaspowell8020/ai-agent-pricing) — sister repo with frontier model pricing, refreshed daily
 
 ## Contributing
 
