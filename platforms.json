@@ -279,7 +279,7 @@
       "techLevel": "low-code",
       "pricing": "Freemium. Team plans from $199/month.",
       "rating": 3.5,
-      "verdict": "Best for internal knowledge base and document Q&A. Strong in its lane, expensive outside it.",
+      "verdict": "Best for internal knowledge base and document Q&A agents. Handles SOPs, contracts, and Notion wikis well. Strong in its lane, expensive outside it.",
       "bestFor": "Ops teams who want AI agents over their internal documents — SOPs, contracts, product specs, Notion wikis.",
       "notFor": "External-facing automations or multi-step process workflows — n8n handles those better for most teams.",
       "description": "Stack AI shines on document-heavy use cases: ingest your internal knowledge base and make it queryable by AI agents. If your team spends hours looking through Notion, Confluence, or shared drives, Stack AI can turn those documents into an AI that answers questions in plain English. The RAG implementation is one of the better ones in the no-code category. Where it falls short is flexibility — multi-step automations with conditional logic are better served by n8n or Relevance AI.",
