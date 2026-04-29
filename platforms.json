@@ -2,7 +2,7 @@
   "$schema": "./platforms.schema.json",
   "source": "https://agentshortlist.com",
   "sourceRepo": "https://github.com/lucaspowell8020/agentshortlist",
-  "verifiedDate": "2026-04-28",
+  "verifiedDate": "2026-04-29",
   "verificationCadence": "monthly",
   "verificationMethod": "Hands-on testing across real builder workflows. Verdicts and ratings are editorial. Pros and cons reflect production use, not vendor marketing.",
   "license": "CC-BY-4.0",
@@ -712,6 +712,189 @@
         {
           "title": "CI/CD Pipeline Generation",
           "body": "Describe what you want to ship and Codex writes the GitHub Actions or GitLab CI YAML, including build, test, and deploy stages. The integration with OpenAI's broader product suite makes the GitHub Actions story particularly polished."
+        }
+      ]
+    },
+    {
+      "slug": "cline",
+      "name": "Cline",
+      "tagline": "The open coding agent — 61k GitHub stars, 5M installs",
+      "category": "coding",
+      "categoryLabel": "Coding Agent",
+      "url": "https://cline.bot",
+      "openSource": true,
+      "techLevel": "developer",
+      "pricing": "Free and open-source. BYOK — you pay API costs directly to Anthropic, OpenAI, or any provider. No Cline subscription required. Enterprise plans available.",
+      "rating": 4.5,
+      "verdict": "The most popular open-source coding agent by install count. 61k GitHub stars, 5M installs. BYOK means no subscription — pay your API provider directly.",
+      "bestFor": "Developers who want full control and transparency — open source, model-agnostic, works across VS Code, JetBrains, and CLI. The default pick for builders who don't want a SaaS subscription on top of their API costs.",
+      "notFor": "Non-developers wanting a point-and-click interface. Anyone who prefers an all-in-one managed subscription to direct API billing.",
+      "description": "Cline is an open-source AI coding agent with 61k GitHub stars and over 5 million installs across VS Code, JetBrains, and CLI. It's BYOK — you connect your own Anthropic, OpenAI, or other API key and pay providers directly. Cline handles the full agentic loop: reads your codebase, plans changes, edits across files, runs commands, and iterates. Backed by enterprise adoption at Samsung, Microsoft, and Amazon.",
+      "pros": [
+        "BYOK — no Cline subscription, just your API costs. Often cheaper than Cursor Pro for heavy users",
+        "61k GitHub stars — the largest open-source coding agent community",
+        "Works in VS Code, JetBrains, and CLI — not locked to one IDE",
+        "Fully model-agnostic: Claude, GPT, Gemini, local models via Ollama",
+        "Full agentic loop — reads, plans, edits, runs commands, and iterates",
+        "Open source and auditable — you can see exactly what it's doing"
+      ],
+      "cons": [
+        "BYOK setup adds friction vs Cursor or GitHub Copilot's one-subscription model",
+        "No built-in usage dashboard — tracking costs across sessions requires external tooling",
+        "Less polished UI than Cursor — it's a power-user tool, not a beginner IDE",
+        "Enterprise support is newer and less mature than Cursor's"
+      ],
+      "useCases": [
+        {
+          "title": "Full Codebase Refactors Without a Subscription Tax",
+          "body": "Cline's BYOK model means a large refactor costs you Claude API tokens — not a pro seat plus token overages. Developers doing heavy, sustained agentic work often find the direct API billing significantly cheaper than Cursor Pro for the same output."
+        },
+        {
+          "title": "Multi-IDE Teams Where Cursor Doesn't Fit",
+          "body": "Cursor is VS Code only. If your team splits between VS Code and JetBrains, Cline is the only open-source option that covers both. Same agent behaviour, same API keys, different IDE — no context switching."
+        },
+        {
+          "title": "Multi-File Feature Implementation",
+          "body": "Describe a feature in plain English. Cline reads the relevant files, plans the implementation, edits across multiple files in sequence, runs your test suite, and iterates on failures. The full loop runs without you driving each step."
+        },
+        {
+          "title": "Model Switching for Different Task Types",
+          "body": "Use Claude Sonnet for complex multi-file reasoning, drop to Gemini Flash for fast iteration cycles, use a local Ollama model for sensitive codebases where data can't leave your machine. Cline's model-agnostic architecture makes this the most flexible tool on this list."
+        }
+      ]
+    },
+    {
+      "slug": "roo-code",
+      "name": "Roo Code",
+      "tagline": "Open-source VS Code agent with role-specific coding modes",
+      "category": "coding",
+      "categoryLabel": "Coding Agent",
+      "url": "https://roocode.com",
+      "openSource": true,
+      "techLevel": "developer",
+      "pricing": "Free and open-source. BYOK — pay only for API calls to your chosen provider. No Roo Code subscription fee.",
+      "rating": 4,
+      "verdict": "Free open-source VS Code agent with role-specific modes: Architect, Code, Debug, Test. Strong model flexibility. 23.7k GitHub stars. A focused Cline fork.",
+      "bestFor": "Developers who want Cline-style agentic coding with more structured role separation — Architect mode for planning, Code mode for implementation, Debug mode for fixing. Useful for complex tasks that benefit from keeping the AI's focus narrow.",
+      "notFor": "Non-VS Code developers — Roo Code is VS Code only. Anyone wanting a managed hosted solution rather than BYOK.",
+      "description": "Roo Code is a free, open-source AI coding agent for VS Code with 23.7k GitHub stars. Its defining feature is role-specific modes: Architect mode plans features without touching code, Code mode implements them, Debug mode traces errors, Test mode writes coverage. Each mode limits the AI's tool access to what's relevant — reducing runaway edits. Fully BYOK and model-agnostic.",
+      "pros": [
+        "Role-specific modes (Architect, Code, Debug, Test) keep the AI focused on one job at a time",
+        "Fully free — no subscription, just API costs",
+        "Model-agnostic: works with Claude, GPT, Gemini, and local models",
+        "Permission-based command approval before any command runs",
+        "Open source — transparent about what it's doing and why"
+      ],
+      "cons": [
+        "VS Code only — no JetBrains, no CLI-first workflow",
+        "Smaller community than Cline (23.7k vs 61k stars)",
+        "Mode switching adds cognitive overhead for simple tasks — sometimes you just want to ask and get an answer",
+        "Less enterprise support infrastructure than Cursor or Cline"
+      ],
+      "useCases": [
+        {
+          "title": "Planning Before Coding With Architect Mode",
+          "body": "Before writing a single line, switch to Architect mode and ask Roo Code to plan the implementation. It reads the codebase, proposes an approach, and maps out the files it'll touch — all without editing anything. Switch to Code mode when the plan looks right. The separation prevents the common failure mode of AI agents that start editing before they understand the problem."
+        },
+        {
+          "title": "Isolated Debugging Sessions",
+          "body": "Paste an error or point at a failing test. Debug mode narrows Roo Code's tool access to read-only analysis and targeted fixes — it doesn't refactor unrelated code while fixing your bug. Better surgical precision than a general-purpose agent that treats every task the same way."
+        },
+        {
+          "title": "Test Coverage on Demand",
+          "body": "Point Test mode at a module with low coverage. It reads the implementation, identifies edge cases, and writes a suite covering them — without touching the implementation files. Useful before a refactor or release when you need confidence without adding risk."
+        }
+      ]
+    },
+    {
+      "slug": "kilo-code",
+      "name": "Kilo Code",
+      "tagline": "Open-source coding agent for VS Code, JetBrains, and CLI",
+      "category": "coding",
+      "categoryLabel": "Coding Agent",
+      "url": "https://kilo.ai",
+      "openSource": true,
+      "techLevel": "developer",
+      "pricing": "Free tier available (Kilo Auto, no credit card required). Paid plans for higher usage. BYOK supported — connect your own API key to any of 500+ models via Kilo Gateway.",
+      "rating": 4,
+      "verdict": "Open-source coding agent for VS Code, JetBrains, and CLI. 500+ models via Kilo Gateway. #2 on OpenRouter this week. Trusted at Meta, Amazon, and Airbnb.",
+      "bestFor": "Developers who want Claude Code-style agentic workflows but need JetBrains support or broader model access. The multi-IDE story is the clearest differentiator from Claude Code and Cursor.",
+      "notFor": "Non-technical users wanting a no-code interface. Teams fully happy with Claude Code who don't need JetBrains or alternative model providers.",
+      "description": "Kilo Code is an open-source AI coding agent — Apache-2.0 licensed — that runs across VS Code, JetBrains IDEs, and the CLI. It supports 500+ AI models via its Kilo Gateway, including BYOK for direct API access. Claimed to be the most popular open-source coding agent by downloads, with enterprise adoption at Meta, Amazon, and Airbnb. Cloud agents run 24/7 and integrate with Slack, Discord, and Telegram.",
+      "pros": [
+        "VS Code, JetBrains, and CLI — the broadest IDE coverage of any coding agent on this list",
+        "500+ models via Kilo Gateway — not locked to Anthropic or OpenAI",
+        "Cloud agents run 24/7 without your laptop open",
+        "Apache-2.0 open source — auditable and self-hostable",
+        "Slack, Discord, and Telegram integrations for async agent workflows",
+        "Free tier with no credit card required"
+      ],
+      "cons": [
+        "Newer than Cursor or Cline — smaller community, less battle-tested documentation",
+        "500+ model support adds decision overhead — more choices don't always mean better outcomes",
+        "Cloud agent feature is newer and less proven at scale than established CI/CD-based approaches",
+        "JetBrains support, while a key differentiator, lags VS Code in feature parity"
+      ],
+      "useCases": [
+        {
+          "title": "JetBrains Teams Who Want Agentic Coding",
+          "body": "Cursor doesn't run in IntelliJ, WebStorm, or PyCharm. Kilo Code does. For teams invested in JetBrains IDEs who want the same agentic loop — read codebase, plan, edit across files, run tests — Kilo Code is the only serious option. The VS Code experience is good; the JetBrains experience fills a gap nobody else covers."
+        },
+        {
+          "title": "Model Flexibility Without Switching Tools",
+          "body": "Kilo Gateway gives you 500+ models in one interface. Use Claude Sonnet for complex reasoning tasks, drop to a cheaper model for repetitive generation, switch to a local model for sensitive code. Same tool, same workflow, different models — without setting up separate API connections for each."
+        },
+        {
+          "title": "Async Agent Work via Slack or Discord",
+          "body": "Trigger a Kilo Code agent from Slack, let it run overnight, get results in the channel when it finishes. The messaging integrations make it practical for teams that want agents doing work asynchronously — not just developers sitting in an IDE."
+        }
+      ]
+    },
+    {
+      "slug": "openhands",
+      "name": "OpenHands",
+      "tagline": "The autonomous coding agent for full engineering tasks",
+      "category": "coding",
+      "categoryLabel": "Coding Agent",
+      "url": "https://openhands.dev",
+      "openSource": true,
+      "techLevel": "developer",
+      "pricing": "Open-source and self-hostable (free). Cloud version available with a free tier. Paid cloud plans for teams and enterprises.",
+      "rating": 4,
+      "verdict": "65k GitHub stars. Autonomous coding agent that completes full engineering tasks — PR reviews, vulnerability fixes, legacy migrations. Cloud or self-hosted.",
+      "bestFor": "Platform and DevOps teams automating engineering workflows at scale: fixing CVEs, reviewing PRs, migrating legacy code, triaging incidents. Built for discrete autonomous tasks, not inline IDE assistance.",
+      "notFor": "Developers who want an IDE pair programmer for day-to-day coding. OpenHands is designed for autonomous task completion, not inline suggestions while you type.",
+      "description": "OpenHands (formerly OpenDevin) is an open-source autonomous coding agent with 65k GitHub stars. Unlike Cursor or Cline — which assist developers in real time — OpenHands completes entire engineering tasks end-to-end: scanning for vulnerabilities and opening PRs, reviewing code against security best practices, migrating legacy systems (COBOL to Java), and triaging production incidents. Runs in Docker/Kubernetes for full isolation. Model-agnostic and deployable air-gapped.",
+      "pros": [
+        "65k GitHub stars — one of the most-starred AI coding projects on GitHub",
+        "Task-complete architecture — hands you a finished PR, not a suggestion",
+        "Parallel task execution — runs multiple agents on different tasks simultaneously",
+        "Runs in isolated Docker/Kubernetes environments with full auditability",
+        "Model-agnostic and deployable air-gapped for strict compliance environments",
+        "Native GitHub, GitLab, and CI/CD integrations"
+      ],
+      "cons": [
+        "Not an IDE tool — no inline autocomplete, no real-time pair programming",
+        "Autonomous execution means mistakes require review before merging — trust-but-verify is essential",
+        "Higher setup complexity than Cursor or Cline for simple use cases",
+        "Better suited to well-scoped discrete tasks than open-ended exploratory development"
+      ],
+      "useCases": [
+        {
+          "title": "Automated Vulnerability Scanning and PR Creation",
+          "body": "Point OpenHands at your dependency tree on a schedule. It scans for CVEs, assesses severity, writes the fix, and opens a reviewable PR — complete with a description of what changed and why. Security hygiene without a dedicated security engineer or a manual weekly audit."
+        },
+        {
+          "title": "PR Review at Scale",
+          "body": "Wire OpenHands into your GitHub webhook. Every PR gets an autonomous review: code quality, potential security issues, test coverage gaps, and architectural concerns — before a human reviewer looks at it. Engineering teams processing high PR volumes use this to catch the obvious issues before they consume senior developer time."
+        },
+        {
+          "title": "Legacy System Migration",
+          "body": "Hand OpenHands a legacy module — COBOL, old Java, deprecated Python 2 code — and a target. It plans the migration, rewrites the code, writes tests against the new implementation, and opens the PR. Work that gets deferred indefinitely because it's risky and boring becomes a single autonomous job."
+        },
+        {
+          "title": "Incident Triage from Production Errors",
+          "body": "When an alert fires, OpenHands traces the stack, reads the relevant code, identifies the root cause, and drafts a fix — all before a human is paged. The on-call engineer gets a PR with a diagnosis and a proposed fix, not a raw stack trace to reverse-engineer at 2am."
         }
       ]
     },
