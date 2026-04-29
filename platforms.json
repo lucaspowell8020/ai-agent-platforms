@@ -899,6 +899,54 @@
       ]
     },
     {
+      "slug": "windsurf",
+      "name": "Windsurf",
+      "tagline": "The AI IDE built for speed and autonomous execution",
+      "category": "coding",
+      "categoryLabel": "Coding Agent",
+      "url": "https://windsurf.com",
+      "openSource": false,
+      "techLevel": "developer",
+      "pricing": "Free tier (limited). Pro ~$15/month. Teams ~$30/user/month.",
+      "rating": 4.5,
+      "verdict": "Codeium's AI IDE. Cascade handles multi-file edits autonomously. Fast autocomplete edges Cursor on speed; Flows runs complex tasks without you in the loop.",
+      "bestFor": "Developers who want the fastest IDE-native coding agent — strong on autocomplete speed, large codebase understanding, and autonomous multi-file refactors without leaving the editor.",
+      "notFor": "Teams wanting terminal-first or headless agent workflows. Windsurf is IDE-bound — Claude Code or Aider are better for CLI-driven automation.",
+      "description": "Windsurf is Codeium's AI-native IDE — a VS Code fork with Cascade, their agentic AI engine, built in at the core. Where Cursor wires AI onto an editor, Windsurf redesigned the IDE around autonomous execution. Cascade handles multi-file edits, runs commands, browses code context, and completes tasks end-to-end — not just suggests changes for you to accept. Flows is the agent layer: give it a goal ('refactor this module to handle errors properly') and it plans and executes across files without you approving every step. Autocomplete speed is the consistent benchmark Windsurf wins on — Supercomplete predicts multi-line edits before you finish typing. Acquired by OpenAI in 2025; now one of the most actively developed AI IDEs.",
+      "pros": [
+        "Fastest autocomplete in the category — Supercomplete predicts before you finish",
+        "Cascade agent completes multi-file tasks autonomously end-to-end",
+        "Flows layer handles complex goals with full autonomy",
+        "Strong large-codebase understanding — indexes your full repo",
+        "Active development post-OpenAI acquisition",
+        "Free tier is genuinely usable — low friction to evaluate"
+      ],
+      "cons": [
+        "IDE-bound — no CLI or headless mode for server-side automation",
+        "Less customisable than Claude Code for complex multi-step workflows",
+        "VS Code extension ecosystem support slightly behind pure VS Code",
+        "OpenAI acquisition raises questions about long-term model flexibility"
+      ],
+      "useCases": [
+        {
+          "title": "Autonomous Multi-File Refactors",
+          "body": "Tell Cascade to rename a pattern across a codebase, extract logic into shared utilities, or convert a module to a new API shape. It plans the full scope, edits every affected file, and surfaces a summary — no approve-each-step friction. Work that would take a developer an afternoon completes in minutes."
+        },
+        {
+          "title": "Codebase Understanding and Q&A",
+          "body": "Drop into a new codebase or pick up an old one and ask Windsurf to explain it. It reads the whole repo — not just the open file — and answers with specific file references. Faster than grepping and reading for unfamiliar codebases."
+        },
+        {
+          "title": "Test Generation at Scale",
+          "body": "Point Cascade at a module and ask for full test coverage. It writes the tests, runs them, reads the failures, and fixes them — the whole loop. Teams use this to bootstrap test coverage on legacy code without manual spec-writing."
+        },
+        {
+          "title": "Bug Investigation and Fix",
+          "body": "Paste an error or describe a bug. Cascade traces the call stack, reads the relevant files, identifies the root cause, and proposes a fix — often editing multiple files to address both the symptom and the underlying issue. Junior developers use this to navigate complex bugs above their current level."
+        }
+      ]
+    },
+    {
       "slug": "manus",
       "name": "Manus AI",
       "tagline": "The autonomous AI agent that went viral in early 2025",
