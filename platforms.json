@@ -2,7 +2,7 @@
   "$schema": "./platforms.schema.json",
   "source": "https://agentshortlist.com",
   "sourceRepo": "https://github.com/lucaspowell8020/agentshortlist",
-  "verifiedDate": "2026-04-29",
+  "verifiedDate": "2026-05-18",
   "verificationCadence": "monthly",
   "verificationMethod": "Hands-on testing across real builder workflows. Verdicts and ratings are editorial. Pros and cons reflect production use, not vendor marketing.",
   "license": "CC-BY-4.0",
@@ -21,13 +21,15 @@
       "verdict": "The most mature open-source agent harness. If you want one AI doing things across your tools and devices, start here.",
       "bestFor": "Individuals and small teams who want a self-hosted AI that controls their computer, manages email, and runs tasks — without a monthly SaaS bill.",
       "notFor": "Non-technical operators who don't want to run software on their own machines.",
-      "description": "OpenClaw is the flagship personal AI harness — 365,000 GitHub stars makes it one of the most popular AI projects ever built. You install it locally (Mac, Windows, or Linux), connect it to a messaging platform (WhatsApp, Telegram, iMessage — it supports 20+), and you have an AI with hands: it browses the web, reads email, executes scripts, fills forms, and talks to your APIs. The community is the main reason to choose it. 365k stars means 500+ contributors, thousands of community-built skills, and documentation that has been written, corrected, and improved by people who actually use it. Model-agnostic: run it against Claude, GPT-4, or a local model.",
+      "description": "OpenClaw is the flagship personal AI harness — 365,000 GitHub stars makes it one of the most popular AI projects ever built. You install it locally (Mac, Windows, or Linux), connect it to a messaging platform (WhatsApp, Telegram, iMessage — it supports 20+), and you have an AI with hands: it browses the web, reads email, executes scripts, fills forms, and talks to your APIs. The community is the main reason to choose it. 365k stars means 500+ contributors, thousands of community-built skills, and documentation that has been written, corrected, and improved by people who actually use it. Model-agnostic: run it against Claude, GPT-4, or a local model. Recent versions (v4.22 and v4.24) added real-time voice streaming integration via xAI/Deepgram/ElevenLabs, native image generation without API keys, and forked context — letting child sub-agents inherit memory from their parents.",
       "pros": [
         "365k stars — the largest open-source agent community by far",
         "Runs on your own hardware, fully private",
         "20+ messaging platform integrations",
         "Model-agnostic: Claude, GPT, local models all supported",
-        "Mature plugin and skills ecosystem"
+        "Mature plugin and skills ecosystem",
+        "v4.22+ adds real-time voice streaming and native image generation",
+        "Forked context lets sub-agents inherit memory from parent agents"
       ],
       "cons": [
         "Single-user architecture by default — not built for team deployment",
