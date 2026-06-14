@@ -2,7 +2,7 @@
   "$schema": "./platforms.schema.json",
   "source": "https://agentshortlist.com",
   "sourceRepo": "https://github.com/lucaspowell8020/agentshortlist",
-  "verifiedDate": "2026-06-09",
+  "verifiedDate": "2026-06-14",
   "verificationCadence": "monthly",
   "verificationMethod": "Hands-on testing across real builder workflows. Verdicts and ratings are editorial. Pros and cons reflect production use, not vendor marketing.",
   "license": "CC-BY-4.0",
@@ -381,25 +381,28 @@
       "url": "https://cursor.com",
       "openSource": false,
       "techLevel": "developer",
-      "pricing": "Hobby (free): 2k completions/month, 50 slow requests/month. Pro $20/month. Pro+ $60. Ultra $200. Teams $40/user/month. June 2025 pricing pivot reduced effective fast requests by ~55%.",
+      "pricing": "Hobby (free): 2k completions/month, 50 slow requests/month. Pro $20/month — the most common tier. Pro+ $60/month. Ultra $200/month. Teams $40/user/month with usage scaling. June 2025 pricing pivot replaced fixed fast-request quotas with a $20 credit pool, cutting effective monthly fast requests by ~55%.",
       "rating": 4,
-      "verdict": "The most-used AI coding IDE — $2B revenue, 360k paying users. Multi-model flexibility is a real edge. June 2025 pricing changes burned early adopters.",
-      "bestFor": "Builders who want an IDE-first AI experience and the ability to switch between Claude, GPT, and Gemini mid-session. Strong for rapid prototyping and exploration.",
-      "notFor": "Teams committed to JetBrains, Vim, or any non-VS Code editor. Anyone who wants CLI-first workflows. Operators sensitive to SaaS pricing changes.",
-      "description": "Cursor is a VS Code fork with AI baked into the editor. The headline is multi-model: Claude Sonnet 4.6, GPT-5, and Gemini 2.0 are all available, and you can switch between them mid-session for the same task. That flexibility is the real differentiator — Claude Code only runs Claude, Codex only runs OpenAI. The IDE-first approach is faster than CLI workflows for exploration and rapid prototyping. The trade-off is VS Code lock-in: no JetBrains, no Vim, no terminal-first workflows. The June 2025 pricing pivot replaced fixed fast-request quotas with a $20 credit pool, which effectively cut monthly requests by ~55% without an announcement. Existing users felt blindsided. Despite that, Cursor still hit $2B annualised revenue by early 2026 — the market has voted.",
+      "verdict": "The most-used AI coding IDE in 2026 — $2B annualised revenue, 360k paying users. Multi-model flexibility (Claude, GPT, Gemini in one session) is a real edge. Tab completion is best-in-class. The June 2025 pricing change burned early adopters and trust hasn't fully recovered; for cost-sensitive builders, Cline at BYOK with Claude Sonnet often comes out cheaper for the same workflow.",
+      "bestFor": "Builders who want an IDE-first AI experience and the ability to switch between Claude, GPT, and Gemini mid-session. Strong for rapid prototyping, exploration of unfamiliar codebases, and active development sessions where short feedback loops matter more than autonomous agentic work.",
+      "notFor": "Teams committed to JetBrains, Vim, or any non-VS Code editor. Anyone who wants CLI-first or terminal-first agentic workflows (Claude Code or Aider fit better). Operators sensitive to SaaS pricing changes — the June 2025 pivot is a real signal. High-volume daily users for whom direct API costs would be cheaper than Cursor's credit pool.",
+      "description": "Cursor is a VS Code fork with AI baked into the editor — not as a sidebar, but as a first-class layer that drives completions, refactors, codebase chat, and an agent mode that can run multi-file edits autonomously. It's the most-used AI coding tool by paying customer count in 2026, with 360,000+ paying users and $2B in annualised revenue. The user base alone is a real signal — when a category of tool gets to that scale, it's because the product works for the bulk of the addressable market.\n\nThe headline differentiator is multi-model selection. Claude Sonnet 4.6, GPT-5 family, Gemini 2.5 Pro and Flash, plus a handful of cheaper alternatives are all available — and you can switch between them mid-session for the same task. Try Claude for a complex refactor; if it doesn't get it right, switch to GPT-5 and see if it handles the architecture differently. No other dominant coding tool in 2026 supports this without environment-switching. Claude Code only runs Anthropic; OpenAI Codex only runs GPT; the open-source CLI tools (Aider, Cline) support multi-model but lack the IDE integration.\n\nPricing is the part most builders need to understand before subscribing. The Hobby tier is free with 2,000 completions and 50 slow requests per month — usable for casual experimentation, not for serious daily work. Pro at $20/month is the tier most builders settle on; the headline is unlimited completions plus a credit pool for agent and chat usage. Pro+ at $60/month and Ultra at $200/month give you bigger pools. Teams is $40/user/month with admin features and shared billing. The complication: in June 2025, Cursor replaced fixed fast-request quotas with a $20 credit pool, which effectively cut monthly fast requests by roughly 55% for most users. The change wasn't announced clearly; existing Pro subscribers found their monthly capacity quietly shrunk. Trust dented — and older reviews predating the change overstate what $20 buys today.\n\nWhat it's actually like to use, day to day: Tab completion is genuinely best-in-class. The AI suggests not just the next line but the next several edits across multiple files, and you accept-or-reject with one keystroke. `Cmd+K` for in-line edits is the fastest way to make a targeted change that exists in any coding tool we've tested. The chat sidebar is competent — codebase-aware questions get accurate answers because Cursor indexes your repo. Agent mode is the part where opinions split: for short tasks (rename a function and update call sites, add a route, write a test), agent mode works well. For longer agentic loops on real codebases, Claude Code is more reliable in our testing — Cursor's agent mode occasionally makes large unreviewable multi-file edits that are hard to roll back. Pair with branch-and-commit-first discipline.\n\nWhich model to pick on Cursor depends on the task. Claude Sonnet 4.6 is our default for everything code-shaped — best reasoning per dollar in the lineup. GPT-5 is the right swap when Claude struggles on architectural decisions or unfamiliar frameworks. Gemini 2.5 Pro is the right swap for very long-context tasks (multi-file refactors across large codebases) where Cursor's context window matters. The cheaper models (Claude Haiku, GPT-5 Mini, Gemini Flash) are competent for completions but we wouldn't run agent mode on them for production work. The model selector is in the bottom-right of the chat panel — most builders set it once and forget it; the value compounds when you actually swap based on task shape.\n\nWhere Cursor is the wrong pick: if you're on JetBrains, Vim, or any non-VS Code editor, Cursor requires you to switch IDEs — usually not worth it for what you gain. If your workflow is CLI-first or terminal-native, Aider and Claude Code give you the same model access without the IDE. If you're a high-volume user where direct Claude API costs would be cheaper than Cursor Pro's effective rate, switching to Cline (BYOK, open-source, same Claude API) often wins on economics. And if SaaS pricing volatility is something you can't live with, the June 2025 pricing change is a real warning sign that should factor into the choice.",
       "pros": [
-        "Multi-model — switch between Claude, GPT, and Gemini in the same session",
-        "Familiar VS Code experience reduces onboarding friction",
-        "Largest paying customer base on this list (360k)",
-        "Best for rapid prototyping and exploration",
-        "Active product development — feature velocity is high"
+        "Multi-model — switch between Claude, GPT, and Gemini in the same session (genuinely unique in the category)",
+        "Tab completion is best-in-class — predicts multi-file edits, not just next-line",
+        "Familiar VS Code experience reduces onboarding friction to near-zero",
+        "Largest paying customer base on this list (360k), validates product-market fit",
+        "Active product development — agent mode, model selector, and codebase chat ship updates weekly",
+        "Codebase-aware semantic search beats raw grep for navigating unfamiliar repos",
+        "Cmd+K in-line edit is the fastest targeted-change interaction in any coding tool"
       ],
       "cons": [
         "VS Code lock-in — no JetBrains, no Vim, no terminal-first workflows",
-        "June 2025 pricing pivot cut effective requests ~55% without warning",
-        "Agent mode can make large unreviewable multi-file edits",
-        "Performance lag on very large projects vs vanilla VS Code",
-        "Opaque usage meter — hard to track credit consumption in real time"
+        "June 2025 pricing pivot cut effective fast requests ~55% without clear notice",
+        "Agent mode can make large unreviewable multi-file edits — needs branch-and-commit discipline",
+        "Performance lag on very large projects vs vanilla VS Code (and vs Augment Code at the enterprise-codebase end)",
+        "Opaque usage meter — hard to track credit consumption against the $20 pool in real time",
+        "For high-volume daily users, direct Claude API via Cline often comes out cheaper than the Cursor subscription"
       ],
       "useCases": [
         {
