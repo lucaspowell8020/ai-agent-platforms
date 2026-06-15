@@ -2,7 +2,7 @@
   "$schema": "./platforms.schema.json",
   "source": "https://agentshortlist.com",
   "sourceRepo": "https://github.com/lucaspowell8020/agentshortlist",
-  "verifiedDate": "2026-06-14",
+  "verifiedDate": "2026-06-15",
   "verificationCadence": "monthly",
   "verificationMethod": "Hands-on testing across real builder workflows. Verdicts and ratings are editorial. Pros and cons reflect production use, not vendor marketing.",
   "license": "CC-BY-4.0",
@@ -729,25 +729,29 @@
       "url": "https://cline.bot",
       "openSource": true,
       "techLevel": "developer",
-      "pricing": "Free and open-source. BYOK — you pay API costs directly to Anthropic, OpenAI, or any provider. No Cline subscription required. Enterprise plans available.",
+      "pricing": "Free and open-source. BYOK — you pay API costs directly to Anthropic, OpenAI, or any provider. Typical solo-developer monthly spend on Claude Sonnet: $20–$100 in API tokens. No Cline subscription required. Enterprise plans available for teams.",
       "rating": 4.5,
-      "verdict": "The most popular open-source coding agent by install count. 61k GitHub stars, 5M installs. BYOK means no subscription — pay your API provider directly.",
-      "bestFor": "Developers who want full control and transparency — open source, model-agnostic, works across VS Code, JetBrains, and CLI. The default pick for builders who don't want a SaaS subscription on top of their API costs.",
-      "notFor": "Non-developers wanting a point-and-click interface. Anyone who prefers an all-in-one managed subscription to direct API billing.",
-      "description": "Cline is an open-source AI coding agent with 61k GitHub stars and over 5 million installs across VS Code, JetBrains, and CLI. It's BYOK — you connect your own Anthropic, OpenAI, or other API key and pay providers directly. Cline handles the full agentic loop: reads your codebase, plans changes, edits across files, runs commands, and iterates. Backed by enterprise adoption at Samsung, Microsoft, and Amazon.",
+      "verdict": "The most popular open-source coding agent by install count — 61k GitHub stars, 5M installs. BYOK means no SaaS subscription on top of your API costs, which is often 30–60% cheaper than Cursor Pro for builders running heavy daily agentic work. The trade-off is setup friction (you wire up API keys yourself) and a less polished UI than Cursor. For developers who want full control and direct API billing, this is the default pick in 2026.",
+      "bestFor": "Developers who want full control and transparency — open-source, model-agnostic, works across VS Code, JetBrains, and CLI. The default pick for builders who don't want a SaaS subscription markup on top of their API costs, especially high-volume daily users where direct API billing meaningfully beats Cursor's $20 credit pool.",
+      "notFor": "Non-developers who want a point-and-click interface. Anyone who prefers an all-in-one managed subscription with one bill instead of direct API billing. Builders for whom the 10-minute BYOK setup friction outweighs the long-term cost savings (in which case Cursor Pro is the right pick).",
+      "description": "Cline is an open-source AI coding agent with 61k GitHub stars and over 5 million installs across VS Code, JetBrains, and CLI. It's the most popular open-source coding agent on this list by adoption count — and a credible alternative to Cursor for developers who want to run the same Claude or GPT models without paying a SaaS markup. Backed by enterprise adoption at Samsung, Microsoft, and Amazon. Apache 2.0 licensed, fully auditable.\n\nThe headline is BYOK — bring your own key. Instead of paying Cline a monthly subscription on top of model costs, you connect your own Anthropic, OpenAI, OpenRouter, or local-model API key and pay providers directly. The setup takes about 10 minutes: install the VS Code extension, generate an API key from your model provider, paste it into Cline's settings, you're operational. The friction is real but one-time. For builders doing serious daily agentic work, the savings compound — Cline users on Claude Sonnet typically spend $20–$100/month in API tokens, often 30–60% less than what they'd pay for Cursor Pro at the same usage volume.\n\nReal pricing math at different volume tiers, since this is the question most builders are actually asking: a hobbyist developer running Cline 1–2 hours per day on Claude Sonnet 4.6 typically spends $10–$30/month in tokens — well under Cursor Pro's $20 baseline. A serious daily user running 4–6 hours of active agentic work spends $50–$120/month — still competitive with Cursor Pro+ at $60/month if you're hitting the credit-pool ceiling. High-volume teams (multiple developers, multi-hour daily sessions, large refactor cycles) often save $200–$500/month per developer vs the equivalent Cursor Teams tier. The cost crossover point is around 3 hours of active daily use — below that, Cursor's bundled credits are cheaper; above that, Cline wins.\n\nCline vs Cursor — the comparison most builders end up making. Cline is open-source, BYOK, runs as a VS Code extension (and JetBrains, and CLI). Cursor is a forked VS Code with a paid subscription that bundles model access. Cursor's IDE-first experience is more polished — Tab completion is best-in-class, the chat sidebar is faster, and onboarding is one-click. Cline's experience is good but less refined; it's a power-user tool, not a beginner IDE. The choice usually comes down to whether you'd rather pay $20–$60/month for the polished experience (Cursor) or pay only for actual model usage with direct billing (Cline). Many serious operators in 2026 start on Cursor, hit the credit-pool ceiling around the 3-month mark, and switch to Cline for the cost economics. Some switch back when they want a smoother chat experience; most don't.\n\nCline vs Roo Code vs Kilo Code — the three forks builders actually compare. All three start from the same VS Code extension lineage; the divergence is opinionated. Cline is the upstream and has the largest community, fastest core updates, and the most plugins. Roo Code adds mode-based workflows (Code mode, Architect mode, Ask mode, Debug mode, Custom modes) that pre-configure the agent for specific tasks — useful if you like structured workflows. Kilo Code combines features from Cline and Roo with additional integrations and a tighter UX in places. For most builders, Cline is the default — the largest community, fastest upstream updates, and the broadest plugin ecosystem. Move to Roo or Kilo only if you've used Cline long enough to know what specific limitation you're trying to work around.\n\nWhich model to use with Cline — the question Cline doesn't decide for you (intentionally). For most builders, Claude Sonnet 4.6 via direct Anthropic API is the default — best reasoning per dollar for code-shaped tasks, $3/$15 per million tokens, runs typical workflows for $20–$80/month. GPT-5 family is the right swap for tasks where Claude struggles or where you want OpenAI's tool-use stack. DeepSeek V4 Flash at $0.10/$0.20 per million is the right swap for cost-extreme workloads — competitive on simple tasks at 30× lower price than Claude. For sensitive codebases where data can't leave the machine, run Cline against a local Ollama model — the agent behaviour stays the same, the API just points at localhost. The model selector is in Cline's settings; most builders set it once per project and forget it.\n\nWhere Cline is the wrong pick: if you don't want to spend the 10 minutes setting up an API key and connecting it, Cursor Pro at $20/month is the easier path. If you're a non-developer or vibe coder who just wants AI in your editor, Cursor's polish is worth the premium. If you're at a company with strict procurement that wants one SaaS invoice, the BYOK split-billing model (subscription + per-token API costs from a separate provider) can be a procurement headache. And if you're a high-volume user but on JetBrains specifically, Cline's JetBrains support is solid but still newer than Cursor's broader product polish.",
       "pros": [
-        "BYOK — no Cline subscription, just your API costs. Often cheaper than Cursor Pro for heavy users",
+        "BYOK — no Cline subscription, only your direct API costs",
+        "Cost savings of 30–60% vs Cursor Pro for high-volume daily users",
         "61k GitHub stars — the largest open-source coding agent community",
         "Works in VS Code, JetBrains, and CLI — not locked to one IDE",
-        "Fully model-agnostic: Claude, GPT, Gemini, local models via Ollama",
-        "Full agentic loop — reads, plans, edits, runs commands, and iterates",
-        "Open source and auditable — you can see exactly what it's doing"
+        "Fully model-agnostic — Claude, GPT, Gemini, DeepSeek, local Ollama models",
+        "Full agentic loop — reads, plans, edits across files, runs commands, iterates",
+        "Open source and auditable — Apache 2.0, you can read exactly what it's doing",
+        "Active enterprise adoption (Samsung, Microsoft, Amazon) validates production-readiness"
       ],
       "cons": [
-        "BYOK setup adds friction vs Cursor or GitHub Copilot's one-subscription model",
-        "No built-in usage dashboard — tracking costs across sessions requires external tooling",
-        "Less polished UI than Cursor — it's a power-user tool, not a beginner IDE",
-        "Enterprise support is newer and less mature than Cursor's"
+        "BYOK setup adds 10 minutes of friction vs Cursor's one-click subscription",
+        "Less polished UI than Cursor — power-user tool, not beginner-friendly",
+        "No built-in usage dashboard — tracking API costs across sessions requires external tooling",
+        "Tab completion is good but not best-in-class — Cursor still wins on inline suggestions",
+        "Enterprise support newer and less mature than Cursor's commercial team",
+        "Split billing (API + optional team subscription) can be procurement-awkward at large companies"
       ],
       "useCases": [
         {
