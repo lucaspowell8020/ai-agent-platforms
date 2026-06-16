@@ -2,7 +2,7 @@
   "$schema": "./platforms.schema.json",
   "source": "https://agentshortlist.com",
   "sourceRepo": "https://github.com/lucaspowell8020/agentshortlist",
-  "verifiedDate": "2026-06-15",
+  "verifiedDate": "2026-06-16",
   "verificationCadence": "monthly",
   "verificationMethod": "Hands-on testing across real builder workflows. Verdicts and ratings are editorial. Pros and cons reflect production use, not vendor marketing.",
   "license": "CC-BY-4.0",
@@ -244,29 +244,33 @@
     {
       "slug": "n8n",
       "name": "n8n",
-      "tagline": "Workflow automation you control",
+      "tagline": "Workflow automation you control — open-source, AI-agent-native",
       "category": "workflow",
       "categoryLabel": "Workflow builder",
       "url": "https://n8n.io",
       "openSource": true,
       "techLevel": "low-code",
-      "pricing": "Open-source self-hosted (free). Cloud plans from $24/month.",
+      "pricing": "Open-source self-hosted (free — you pay only your server costs and model API tokens). Cloud plans from $24/month for hobbyists; $50–$100/month for serious teams; enterprise pricing for SSO and audit log requirements. AI agent node usage adds model API costs on top.",
       "rating": 4.5,
-      "verdict": "The best workflow automation platform for teams with a developer. Beats every no-code tool for complex automations.",
-      "bestFor": "Teams with at least one developer who need flexible, powerful workflow automation with AI agents built in — and want the option of full data control.",
-      "notFor": "Teams with zero technical resources. Initial setup requires someone comfortable with a server.",
-      "description": "n8n is what technical operators reach for when Zapier or Make isn't flexible enough. It connects to virtually everything (400+ integrations), can be self-hosted for full data control, and has a native AI agent layer that's improved significantly. The visual workflow builder handles conditional logic, loops, error handling, webhooks, and custom HTTP calls without writing code — once it's set up. If your team has even one developer who can spend a day configuring it, n8n will outperform any no-code platform for complex multi-step automations.",
+      "verdict": "The best workflow automation platform for teams with at least one developer — beats every no-code tool for complex multi-step automations with AI agents. Self-hostable for full data control, 400+ integrations, mature AI agent layer. The trade-off is real: initial setup requires technical capacity, and the learning curve is steeper than Zapier or Lindy. For technical operators in 2026, n8n is the default.",
+      "bestFor": "Teams with at least one developer who need flexible, powerful workflow automation with AI agents built in. Strong for marketing ops, customer support automation, internal tool orchestration, and any workflow that touches multiple SaaS APIs. Self-hosted option is the right pick when data residency or compliance matters.",
+      "notFor": "Teams with zero technical resources — initial setup requires comfort with a server (self-hosted) or at minimum YAML-shaped thinking (cloud). Workflows that only need 2–3 steps and basic integrations — Zapier ships faster for simple cases. Pure agentic-loop tasks where no external systems are involved — a dedicated harness like OpenClaw or Paperclip is the better fit there.",
+      "description": "n8n is what technical operators reach for when Zapier or Make isn't flexible enough. It connects to virtually everything (400+ integrations), can be self-hosted for full data control, and has a native AI agent layer that's matured significantly since 2024. The visual workflow builder handles conditional logic, loops, error handling, webhooks, and custom HTTP calls without writing code — once it's set up. If your team has even one developer who can spend a day configuring it, n8n will outperform any no-code platform for complex multi-step automations involving AI agents.\n\nReal pricing math, since 'n8n AI agent pricing' is the highest-intent query the page is showing for. The headline: **n8n itself doesn't charge per AI agent run if you self-host**. The agent nodes execute on your infrastructure; your only AI-related cost is the model API tokens consumed (Claude, GPT, Gemini, DeepSeek, or whatever you wire up). For typical small-team AI workflows running 1,000–5,000 agent invocations per month on Claude Sonnet 4.6, expect $20–$100/month in model costs. For high-volume customer-support deflection at 50k+ runs/month, expect $200–$500/month in model costs. The n8n platform itself adds zero to that bill on self-hosted.\n\nn8n cloud is the alternative for teams who don't want to operate the server. Plans start at $24/month for hobby usage, $50–$100/month for serious teams with multiple workflows, and enterprise pricing kicks in around $500/month with SSO, audit logs, and SOC 2 compliance. Cloud users also pay model API costs on top of the platform fee. The cost crossover with self-hosted is roughly: if your team would spend $20+/month operating a server (VPS, monitoring, backups, security patches), n8n cloud is competitive. For teams already running infrastructure, self-hosted wins on cost.\n\nn8n vs Make vs Zapier for AI workflows — the comparison most builders end up making. **n8n** has the strongest native AI agent support and the deepest extensibility — custom nodes, JavaScript expressions, HTTP requests to anywhere. The right pick when you're technical and want to own the workflow. **Make** is the middle ground — proprietary but powerful, with a solid AI module and a cleaner UI than n8n. The right pick for teams who want flexibility without managing infrastructure. **Zapier** has the largest integration library and the simplest setup — the right pick when integration count matters more than depth of logic and your AI use cases are limited to drafting or classification. For pure AI agent workflows in 2026, n8n leads on capability and Zapier leads on simplicity; Make is between.\n\nWhat n8n is genuinely good at: long-running workflows that span many tools. Customer-support deflection that reads from Intercom, queries your knowledge base, drafts a reply on Claude, checks confidence, and either auto-sends or escalates to a human queue in Slack. Sales outreach that pulls leads from HubSpot, enriches via Clearbit, drafts personalised emails on Claude, and tracks responses back into the CRM. Internal ops that monitor a metric, alert on anomalies, and trigger a Linear ticket. The visual workflow builder genuinely handles complexity that would be painful in Zapier and impossible in Lindy without scripting.\n\nWhat n8n is not good at: pure agentic loops with no external systems involved. If your workflow is 'agent reads a file, makes a decision, writes another file' with no APIs in between, a dedicated harness like OpenClaw, Paperclip, or even a CLI tool like Aider will be faster and simpler. n8n's value is the integration layer; if you don't need it, you're paying for setup overhead with no upside.\n\nWhen n8n is the wrong pick: if your team has no developer at all, the setup will frustrate everyone. Lindy ships in hours for non-technical operators. If you only need 2–3 steps with one or two integrations, Zapier is faster. If you're building a single high-volume agentic workflow with no integration story, a custom code build or a dedicated harness is more efficient. n8n's sweet spot is the messy middle: 5–15 step workflows that touch multiple tools, run on a schedule or webhook trigger, and benefit from the visual builder for ongoing maintenance.",
       "pros": [
         "400+ integrations — connects to virtually everything",
-        "Self-hostable for full data control",
-        "Strong native AI agent support",
-        "Large, active open-source community",
-        "Meaningfully more flexible than Zapier or Make"
+        "Self-hostable for full data control (free, you pay only server + model costs)",
+        "Strong native AI agent support with model-agnostic node design",
+        "Large, active open-source community — fair-code licence",
+        "Meaningfully more flexible than Zapier or Make for complex logic",
+        "JavaScript expressions and custom nodes let you escape any limitation",
+        "Cloud option for teams who don't want to operate the server"
       ],
       "cons": [
-        "Initial setup requires developer time",
-        "Self-hosted version requires ongoing maintenance",
-        "Higher learning curve than no-code alternatives"
+        "Initial setup requires developer time (1+ day for serious workflows)",
+        "Self-hosted version requires ongoing maintenance — patches, backups, monitoring",
+        "Higher learning curve than Zapier or Lindy for non-technical operators",
+        "Visual builder gets cluttered for very large workflows (20+ nodes)",
+        "Pure agentic loops without integrations are better served by dedicated harnesses (OpenClaw, Paperclip)"
       ],
       "githubUrl": "https://github.com/n8n-io/n8n"
     },
@@ -613,25 +617,28 @@
       "url": "https://ampcode.com",
       "openSource": false,
       "techLevel": "developer",
-      "pricing": "Free tier with usage limits. Paid tiers via Sourcegraph subscription. Bundled with Sourcegraph Code Search for teams already on the platform.",
+      "pricing": "Free tier with meaningful usage allowance. Paid tiers $19–$49/month for individuals. Enterprise pricing for teams bundled with Sourcegraph Code Search. Token-based usage on top of subscription tiers.",
       "rating": 4,
-      "verdict": "Sourcegraph's agentic coding tool built on years of code-search investment. Strong for teams already on Sourcegraph; less compelling as a standalone.",
-      "bestFor": "Engineering teams already paying for Sourcegraph Code Search who want to add an AI agent that reuses the existing codebase index. Free tier is generous enough for individual evaluation.",
-      "notFor": "Teams not on Sourcegraph — the standalone story is less differentiated than Claude Code or Augment. Builders who want a simpler CLI experience.",
-      "description": "Amp is Sourcegraph's agentic coding tool, launched in 2025. The differentiator is leverage — Sourcegraph has spent years building Cody (their AI coding assistant) and the Sourcegraph Code Search engine, which indexes large codebases for fast semantic search. Amp builds on that infrastructure: when the agent needs context about a function, a class, a usage pattern, it queries Sourcegraph's pre-built index rather than scanning files at runtime. For teams already running Sourcegraph, this means faster and more accurate context retrieval. The free tier is real and useful for individual evaluation. Where Amp is less compelling is for teams not already on Sourcegraph — the standalone value proposition vs Claude Code, Augment, or Cursor isn't as differentiated. The product is solid; the strategic moat is the Sourcegraph install base.",
+      "verdict": "Sourcegraph's agentic coding tool built on years of code-search investment. The codebase-context story is genuinely differentiated for teams already running Sourcegraph at scale. As a standalone vs Cursor or Claude Code, it's solid but less obvious — the strategic moat is the Sourcegraph install base, not the agent itself.",
+      "bestFor": "Engineering teams already paying for Sourcegraph Code Search who want to add an AI agent that reuses the existing codebase index. Strong for large enterprise codebases (1M+ lines) where context retrieval is the bottleneck. Free tier is generous enough for individual evaluation.",
+      "notFor": "Teams not on Sourcegraph — the standalone story is less differentiated than Claude Code or Augment Code. Solo developers and small projects where the codebase-context advantage doesn't compound. Builders who want a simpler CLI or terminal-first experience.",
+      "description": "Amp is Sourcegraph's agentic coding tool, launched in 2025. The strategic context matters: Sourcegraph has spent nearly a decade building Code Search — an indexing engine that handles 10M+ LOC codebases with semantic search across files, repos, and language ecosystems. Amp is the agentic layer on top of that infrastructure. When the agent needs context about a function, a class, or a usage pattern, it queries Sourcegraph's pre-built index rather than scanning files at runtime. For teams already running Sourcegraph, this means faster and more accurate context retrieval than tools that have to discover code structure on every prompt.\n\nThe differentiator is real for one specific shape of team: enterprises with large codebases (often 1M+ lines, multiple services, deep dependency graphs) that already pay for Sourcegraph. Amp inherits the context layer those teams have already invested in. For solo developers and small projects, that advantage doesn't compound — the index isn't there yet, and the standalone value vs Cursor or Claude Code is less obvious. The pricing reflects this positioning: $19–$49/month for individuals on the paid tier (with a meaningful free tier for evaluation), with enterprise team pricing bundled with Sourcegraph Code Search.\n\nReal cost math for the different user types. Individual evaluator using Amp's free tier: $0/month, generous enough to evaluate whether the Sourcegraph context layer is worth the team-tier upgrade. Solo paid user on $19/month: similar to Cursor Pro, with the Sourcegraph context advantage but less polished IDE-first experience. Enterprise team: pricing varies based on Sourcegraph contract size, typically $50–$100/user/month bundled with Code Search. The unit economics genuinely favor Amp at the enterprise tier; at the solo tier, Cursor or Cline usually wins on price-per-feature.\n\nAmp vs Cursor — the head-to-head most builders evaluate. Cursor has the polished IDE-first experience, multi-model selection (Claude, GPT, Gemini), and the largest paying user base. Amp has the Sourcegraph context-graph advantage for large codebases and the enterprise compliance story (SOC 2, on-prem deployment) that Cursor doesn't ship out of the box. For solo work and small-to-mid codebases, Cursor wins. For enterprise teams at scale where context retrieval on 1M+ LOC matters, Amp is genuinely better. The dividing line is roughly: if your codebase fits in Claude's 1M-token context window, you don't need Amp's advantage.\n\nAmp vs Augment Code — the other large-codebase specialist. Both target enterprise teams where context-window limits become the bottleneck. Augment Code indexes your codebase at runtime and surfaces relevant files per prompt — purpose-built for large repos but standalone. Amp inherits Sourcegraph's pre-built index, which is faster but locks you into the Sourcegraph ecosystem. If you're already on Sourcegraph, Amp is the cheaper and faster path. If you're not, Augment Code is the more flexible standalone choice. Some teams run both (Sourcegraph for code search, Augment for agentic work), but the overlap is significant enough that most pick one.\n\nWhat it's like to use day-to-day. The Amp UX is competent but less refined than Cursor's. Codebase chat works well — ask 'where do we handle authentication?' and Amp returns accurate file references with cross-repo awareness when you have multiple repos indexed. Agentic mode (multi-file edits, refactors, migrations) works for medium-complexity tasks. For the deepest agentic loops — building a feature end-to-end with test-driven iteration — Claude Code is still more reliable in our testing. Amp is also newer to agentic coding than Cursor (launched mid-2025) and the feature velocity is high; the gap is closing.\n\nWhere Amp is the wrong pick: if you're a solo developer or small team where the codebase fits in a frontier model's context window, the Sourcegraph context-graph advantage doesn't compound for you — Cursor or Claude Code will be cheaper and faster. If you're on JetBrains or want a CLI-first workflow, Amp's editor support is currently VS Code-centric. If your team doesn't already pay for Sourcegraph, you're effectively paying for the index plus the agent — at which point Augment Code's standalone story is competitive.",
       "pros": [
         "Built on Sourcegraph's mature code-search and indexing infrastructure",
-        "Free tier with meaningful usage allowance",
+        "Free tier with meaningful usage allowance for individual evaluation",
         "Strong codebase-context story without separate indexing setup",
         "Native integration with Sourcegraph Code Search",
-        "Sourcegraph's enterprise compliance story (SOC 2, on-prem options) carries over"
+        "Sourcegraph's enterprise compliance (SOC 2, on-prem options) carries over",
+        "Cross-repo awareness that single-repo tools miss",
+        "Active product velocity — feature gap vs Cursor is closing fast"
       ],
       "cons": [
-        "Standalone value less compelling than Claude Code or Augment for non-Sourcegraph teams",
-        "Newer to agentic coding than competitors with longer track records",
+        "Standalone value less compelling than Claude Code or Augment Code for non-Sourcegraph teams",
+        "Newer to agentic coding (launched mid-2025) than competitors with longer track records",
         "Smaller community vs Cursor or Copilot",
         "Locked into Sourcegraph as the indexing/context layer",
-        "Best fit narrows to teams already paying for Sourcegraph"
+        "Best fit narrows to enterprise teams already paying for Sourcegraph",
+        "Editor support skews VS Code-centric; JetBrains story less mature"
       ],
       "useCases": [
         {
