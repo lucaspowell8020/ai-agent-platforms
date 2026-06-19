@@ -2,7 +2,7 @@
   "$schema": "./platforms.schema.json",
   "source": "https://agentshortlist.com",
   "sourceRepo": "https://github.com/lucaspowell8020/agentshortlist",
-  "verifiedDate": "2026-06-16",
+  "verifiedDate": "2026-06-19",
   "verificationCadence": "monthly",
   "verificationMethod": "Hands-on testing across real builder workflows. Verdicts and ratings are editorial. Pros and cons reflect production use, not vendor marketing.",
   "license": "CC-BY-4.0",
@@ -925,25 +925,29 @@
       "url": "https://windsurf.com",
       "openSource": false,
       "techLevel": "developer",
-      "pricing": "Free tier (limited). Pro ~$15/month. Teams ~$30/user/month.",
+      "pricing": "Free tier with meaningful daily usage — generous enough for individual evaluation, no credit card required. Pro at $15/month unlocks unlimited Supercomplete and higher Cascade usage. Teams at ~$30/user/month adds collaboration and admin controls. Enterprise pricing on request for SSO, audit logs, and SOC 2 requirements. BYOK is available for serious-volume Cascade users wanting direct OpenAI API access.",
       "rating": 4.5,
-      "verdict": "Codeium's AI IDE. Cascade handles multi-file edits autonomously. Fast autocomplete edges Cursor on speed; Flows runs complex tasks without you in the loop.",
-      "bestFor": "Developers who want the fastest IDE-native coding agent — strong on autocomplete speed, large codebase understanding, and autonomous multi-file refactors without leaving the editor.",
-      "notFor": "Teams wanting terminal-first or headless agent workflows. Windsurf is IDE-bound — Claude Code or Aider are better for CLI-driven automation.",
-      "description": "Windsurf is Codeium's AI-native IDE — a VS Code fork with Cascade, their agentic AI engine, built in at the core. Where Cursor wires AI onto an editor, Windsurf redesigned the IDE around autonomous execution. Cascade handles multi-file edits, runs commands, browses code context, and completes tasks end-to-end — not just suggests changes for you to accept. Flows is the agent layer: give it a goal ('refactor this module to handle errors properly') and it plans and executes across files without you approving every step. Autocomplete speed is the consistent benchmark Windsurf wins on — Supercomplete predicts multi-line edits before you finish typing. Acquired by OpenAI in 2025; now one of the most actively developed AI IDEs.",
+      "verdict": "The fastest AI IDE for developers who want autonomous execution baked into the editor. Cascade and Flows handle multi-file refactors and goal-driven work end-to-end. OpenAI-acquired and actively developed. The right pick when speed and IDE-native autonomy matter more than terminal workflows.",
+      "bestFor": "Developers who want the fastest IDE-native coding agent in 2026. Strong on Supercomplete autocomplete speed, large-codebase understanding, autonomous multi-file refactors, and goal-driven Flows that run without per-step approval. The right pick when your team works primarily in an editor and wants the agent to actively drive work rather than just suggest completions.",
+      "notFor": "Teams wanting terminal-first or headless agent workflows — Windsurf is IDE-bound. Claude Code or Aider are better for CLI-driven automation. Teams committed to JetBrains IDEs — Windsurf is VS Code-shaped and JetBrains support lags. Teams wanting model-agnostic flexibility — the OpenAI acquisition has clarified the model strategy but reduced near-term choice.",
+      "description": "Windsurf is Codeium's AI-native IDE — a VS Code fork with Cascade, their agentic AI engine, built in at the core. Where Cursor wires AI onto an editor, Windsurf redesigned the IDE around autonomous execution. Cascade handles multi-file edits, runs commands, browses code context, and completes tasks end-to-end rather than just suggesting changes for you to accept. Flows is the agent layer: give it a goal like 'refactor this module to handle errors properly' and it plans and executes across files without you approving every step.\n\nReal pricing math, since 'windsurf agent' and 'windsurf ai agent' are the highest-intent queries the page surfaces for. The headline: the free tier is meaningfully more generous than most competitors — enough daily Cascade usage to evaluate the product seriously on real work, no credit card required. Pro at $15/month unlocks unlimited Supercomplete and substantially higher Cascade allowance. A solo developer using Windsurf as their daily driver typically lands at the $15/month tier; heavy agentic users on multi-file Cascade tasks may push into Teams pricing. For most builders, the free tier handles 80% of daily workflow and Pro covers the rest.\n\nWindsurf vs Cursor — the comparison every IDE-shopping developer ends up making. Cursor is the older product with the larger community, more polish on the UX, and the $2B revenue moat. Windsurf is faster (Supercomplete consistently wins on autocomplete latency benchmarks), more autonomous (Cascade and Flows execute multi-file work end-to-end with less per-step approval friction), and currently cheaper at the Pro tier ($15 vs Cursor's $20). The right pick: Cursor if you want the most polished UX and the broadest plugin ecosystem; Windsurf if you want speed and the agent to drive more autonomously.\n\nWindsurf vs Claude Code — the other comparison that matters. These two operate in different modes. Claude Code is a CLI tool that runs in your terminal; you give it goals and it works on your codebase without you in the editor. Windsurf is an IDE; you work alongside the agent in a visual environment. Many teams use both: Windsurf for active development sessions where you want the agent's output visible inline, Claude Code for batch jobs and larger autonomous refactors that don't need your eyes on every step. Don't pick between them if you have both subscription budgets — they're complementary tools, not direct substitutes.\n\nWhat Cascade actually does well: long-context understanding across a full codebase. The agent indexes your repo, reads the relevant files when planning a task, and surfaces cross-file dependencies that would be painful to track manually. Multi-file refactors that would take a developer an afternoon complete in minutes with Cascade. Cascade's strength is the autonomous execution loop — plan, edit, run, observe, iterate — with minimal per-step friction.\n\nWhat Flows adds: goal-driven autonomous work. You define an outcome ('add comprehensive test coverage to this module,' 'refactor authentication to use the new auth library'), and Flows breaks it into subtasks, executes them, validates results, and reports back. This is the same agentic loop pattern Claude Code's autonomous mode runs, exposed inside an IDE for builders who prefer the visual environment to a terminal.\n\nThe OpenAI acquisition in 2025 changed the strategic story. Pre-acquisition, Windsurf was the independent challenger to Cursor with strong investor backing. Post-acquisition, Windsurf is OpenAI's official IDE, with deeper GPT-5+ integration and a clearer commitment to the OpenAI model family. That's good news for OpenAI-committed teams and worth-watching news for teams that valued Codeium's model-agnostic story. So far, Cascade still supports Claude and Gemini models alongside GPT-5+, but the long-term roadmap clearly favours OpenAI.\n\nWhen Windsurf is the wrong pick: if you're a JetBrains shop (Windsurf's JetBrains story lags significantly behind the VS Code experience), if you want terminal-native or headless workflows (Claude Code or Aider are the right tools), or if model-agnostic flexibility is non-negotiable (the OpenAI acquisition has clarified the model strategy but reduced near-term choice). Windsurf's sweet spot is VS Code-comfortable developers who want autonomous execution in the editor with OpenAI's model layer underneath.",
       "pros": [
-        "Fastest autocomplete in the category — Supercomplete predicts before you finish",
-        "Cascade agent completes multi-file tasks autonomously end-to-end",
-        "Flows layer handles complex goals with full autonomy",
-        "Strong large-codebase understanding — indexes your full repo",
-        "Active development post-OpenAI acquisition",
-        "Free tier is genuinely usable — low friction to evaluate"
+        "Fastest autocomplete in the category — Supercomplete predicts multi-line edits before you finish typing",
+        "Cascade agent completes multi-file tasks autonomously end-to-end — less per-step approval friction than Cursor",
+        "Flows layer handles complex goal-driven work with full autonomy inside the editor",
+        "Strong large-codebase understanding — indexes your full repo for cross-file context",
+        "Active development post-OpenAI acquisition — clear roadmap and integration with GPT-5+",
+        "Free tier is genuinely usable — meaningful daily Cascade usage with no credit card",
+        "Pro tier is $5/month cheaper than Cursor with comparable feature depth",
+        "Strongest in-editor autonomous-agent UX of any AI IDE in 2026"
       ],
       "cons": [
         "IDE-bound — no CLI or headless mode for server-side automation",
         "Less customisable than Claude Code for complex multi-step workflows",
+        "JetBrains support lags significantly behind the VS Code experience",
         "VS Code extension ecosystem support slightly behind pure VS Code",
-        "OpenAI acquisition raises questions about long-term model flexibility"
+        "Model flexibility narrowing post-OpenAI acquisition — long-term roadmap favours GPT-5+",
+        "Cascade autonomy can over-execute on ambiguous prompts; guard-rails are looser than Roo Code's mode-based approach"
       ],
       "useCases": [
         {
